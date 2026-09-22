@@ -1,0 +1,104 @@
+//
+// Generated (version 2022.2-SP6.4<build 146967>) at Fri Sep 11 11:42:08 2026
+//
+
+module Test
+(
+    input a,
+    input b,
+    output c,
+    output out_and,
+    output out_or,
+    output out_xor
+);
+    wire nt_a;
+    wire nt_b;
+    wire nt_c;
+    wire nt_out_or;
+    wire nt_out_xor;
+
+    GTP_GRS GRS_INST (
+            .GRS_N (1'b1));
+
+    GTP_LUT2 /* N0 */ #(
+            .INIT(4'b1000))
+        N0 (
+            .Z (nt_c),
+            .I0 (nt_a),
+            .I1 (nt_b));
+	// LUT = I0&I1 ;
+	// ../source/Test.v:10
+
+    GTP_LUT2 /* N1 */ #(
+            .INIT(4'b1110))
+        N1 (
+            .Z (nt_out_or),
+            .I0 (nt_a),
+            .I1 (nt_b));
+	// LUT = (I0)|(I1) ;
+	// ../source/Test.v:11
+
+    GTP_LUT2 /* N2 */ #(
+            .INIT(4'b0110))
+        N2 (
+            .Z (nt_out_xor),
+            .I0 (nt_a),
+            .I1 (nt_b));
+	// LUT = (I0&~I1)|(~I0&I1) ;
+	// ../source/Test.v:12
+
+    GTP_INBUF /* a_ibuf */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .TERM_DDR("ON"))
+        a_ibuf (
+            .O (nt_a),
+            .I (a));
+	// ../source/Test.v:2
+
+    GTP_INBUF /* b_ibuf */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .TERM_DDR("ON"))
+        b_ibuf (
+            .O (nt_b),
+            .I (b));
+	// ../source/Test.v:3
+
+    GTP_OUTBUF /* c_obuf */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        c_obuf (
+            .O (c),
+            .I (nt_c));
+	// ../source/Test.v:4
+
+    GTP_OUTBUF /* out_and_obuf */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        out_and_obuf (
+            .O (out_and),
+            .I (nt_c));
+	// ../source/Test.v:5
+
+    GTP_OUTBUF /* out_or_obuf */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        out_or_obuf (
+            .O (out_or),
+            .I (nt_out_or));
+	// ../source/Test.v:6
+
+    GTP_OUTBUF /* out_xor_obuf */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        out_xor_obuf (
+            .O (out_xor),
+            .I (nt_out_xor));
+	// ../source/Test.v:7
+
+
+endmodule
+

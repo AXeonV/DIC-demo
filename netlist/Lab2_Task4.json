@@ -1,0 +1,2007 @@
+{
+  "creator": "Yosys 0.48 (git sha1 aaa5347494801e9e3870b31387da59da24233f76, clang++ 18.1.2-wasi-sdk -O3)",
+  "modules": {
+    "Lab2_Task4": {
+      "attributes": {
+        "cells_not_processed": "00000000000000000000000000000001",
+        "src": "{workspace}/lab/source/Lab2_Task4.v:1.1-53.10"
+      },
+      "ports": {
+        "mode": {
+          "direction": "input",
+          "bits": [ 2, 3 ]
+        },
+        "current_temperature": {
+          "direction": "input",
+          "signed": 1,
+          "bits": [ 4, 5, 6, 7, 8, 9, 10, 11 ]
+        },
+        "target_temperature": {
+          "direction": "input",
+          "signed": 1,
+          "bits": [ 12, 13, 14, 15, 16, 17, 18, 19 ]
+        },
+        "air_condition": {
+          "direction": "output",
+          "bits": [ 20, 21 ]
+        },
+        "heater": {
+          "direction": "output",
+          "bits": [ 22, 23 ]
+        }
+      },
+      "cells": {
+        "$add${workspace}/lab/source/Lab2_Task4.v:28$10": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000001",
+            "A_WIDTH": "00000000000000000000000000100000",
+            "B_SIGNED": "00000000000000000000000000000001",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:28.55-28.76"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55 ],
+            "B": [ "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "Y": [ 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:259:make_hold$96": {
+          "hide_name": 1,
+          "type": "$reduce_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:12.3-51.6"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 88, 89, 90 ],
+            "Y": [ 91 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:433:proc_dlatch$82": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000000",
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:12.3-51.6"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 92, 93, 94, 95, 96, 97, 98, 99 ],
+            "EN": [ 91 ],
+            "Q": [ 100, 101, 102, 103, 104, 105, 106, 107 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:433:proc_dlatch$83": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 91 ],
+            "Y": [ 108 ]
+          }
+        },
+        "$extend${workspace}/lab/source/Lab2_Task4.v:28$11": {
+          "hide_name": 1,
+          "type": "$pos",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000001",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:28.32-28.95"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 109, 110, 111, 112, 113, 114, 115, 116 ],
+            "Y": [ 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148 ]
+          }
+        },
+        "$extend${workspace}/lab/source/Lab2_Task4.v:28$8": {
+          "hide_name": 1,
+          "type": "$pos",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000001",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:28.55-28.72"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 109, 110, 111, 112, 113, 114, 115, 116 ],
+            "Y": [ 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180 ]
+          }
+        },
+        "$ge${workspace}/lab/source/Lab2_Task4.v:25$5": {
+          "hide_name": 1,
+          "type": "$ge",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000001",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000001",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:25.26-25.47"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 109, 110, 111, 112, 113, 114, 115, 116 ],
+            "B": [ "1", "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "Y": [ 181 ]
+          }
+        },
+        "$ge${workspace}/lab/source/Lab2_Task4.v:33$14": {
+          "hide_name": 1,
+          "type": "$ge",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000001",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000001",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:33.18-33.39"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 109, 110, 111, 112, 113, 114, 115, 116 ],
+            "B": [ "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "Y": [ 182 ]
+          }
+        },
+        "$ge${workspace}/lab/source/Lab2_Task4.v:35$15": {
+          "hide_name": 1,
+          "type": "$ge",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000001",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000001",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:35.28-35.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 109, 110, 111, 112, 113, 114, 115, 116 ],
+            "B": [ "1", "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "Y": [ 183 ]
+          }
+        },
+        "$le${workspace}/lab/source/Lab2_Task4.v:21$3": {
+          "hide_name": 1,
+          "type": "$le",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000001",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000001",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:21.19-21.42"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 109, 110, 111, 112, 113, 114, 115, 116 ],
+            "B": [ "1", "1", "0", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1" ],
+            "Y": [ 184 ]
+          }
+        },
+        "$le${workspace}/lab/source/Lab2_Task4.v:37$17": {
+          "hide_name": 1,
+          "type": "$le",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000001",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000001",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:37.18-37.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 109, 110, 111, 112, 113, 114, 115, 116 ],
+            "B": [ "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1" ],
+            "Y": [ 185 ]
+          }
+        },
+        "$le${workspace}/lab/source/Lab2_Task4.v:39$18": {
+          "hide_name": 1,
+          "type": "$le",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000001",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000001",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:39.21-39.44"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 109, 110, 111, 112, 113, 114, 115, 116 ],
+            "B": [ "1", "1", "0", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1" ],
+            "Y": [ 186 ]
+          }
+        },
+        "$lt${workspace}/lab/source/Lab2_Task4.v:28$7": {
+          "hide_name": 1,
+          "type": "$lt",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000001",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000001",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:28.32-28.52"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 109, 110, 111, 112, 113, 114, 115, 116 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "Y": [ 187 ]
+          }
+        },
+        "$lt${workspace}/lab/source/Lab2_Task4.v:29$13": {
+          "hide_name": 1,
+          "type": "$lt",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:29.13-29.37"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 92, 93, 94, 95, 96, 97, 98, 99 ],
+            "B": [ "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "Y": [ 188 ]
+          }
+        },
+        "$not${workspace}/lab/source/Lab2_Task4.v:28$9": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000001",
+            "A_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:28.55-28.72"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180 ],
+            "Y": [ 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55 ]
+          }
+        },
+        "$procmux$21": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:37.18-37.40|{workspace}/lab/source/Lab2_Task4.v:37.14-44.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0" ],
+            "B": [ 189, 190 ],
+            "S": [ 185 ],
+            "Y": [ 191, 192 ]
+          }
+        },
+        "$procmux$24": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:33.18-33.39|{workspace}/lab/source/Lab2_Task4.v:33.14-44.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 191, 192 ],
+            "B": [ "x", "x" ],
+            "S": [ 182 ],
+            "Y": [ 193, 194 ]
+          }
+        },
+        "$procmux$27": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:29.13-29.37|{workspace}/lab/source/Lab2_Task4.v:29.9-44.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 193, 194 ],
+            "B": [ "x", "x" ],
+            "S": [ 188 ],
+            "Y": [ 195, 196 ]
+          }
+        },
+        "$procmux$29": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x" ],
+            "B": [ 195, 196 ],
+            "S": [ 197 ],
+            "Y": [ 198, 199 ]
+          }
+        },
+        "$procmux$30_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3 ],
+            "B": [ "1", "1" ],
+            "Y": [ 197 ]
+          }
+        },
+        "$procmux$34": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:33.18-33.39|{workspace}/lab/source/Lab2_Task4.v:33.14-44.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0" ],
+            "B": [ "x", "x" ],
+            "S": [ 182 ],
+            "Y": [ 200, 201 ]
+          }
+        },
+        "$procmux$37": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:29.13-29.37|{workspace}/lab/source/Lab2_Task4.v:29.9-44.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 200, 201 ],
+            "B": [ "x", "x" ],
+            "S": [ 188 ],
+            "Y": [ 202, 203 ]
+          }
+        },
+        "$procmux$39": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x" ],
+            "B": [ 202, 203 ],
+            "S": [ 204 ],
+            "Y": [ 205, 206 ]
+          }
+        },
+        "$procmux$40_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3 ],
+            "B": [ "1", "1" ],
+            "Y": [ 204 ]
+          }
+        },
+        "$procmux$42": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:33.18-33.39|{workspace}/lab/source/Lab2_Task4.v:33.14-44.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 205, 206 ],
+            "B": [ 207, 208 ],
+            "S": [ 182 ],
+            "Y": [ 209, 210 ]
+          }
+        },
+        "$procmux$45": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:29.13-29.37|{workspace}/lab/source/Lab2_Task4.v:29.9-44.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 209, 210 ],
+            "B": [ "x", "x" ],
+            "S": [ 188 ],
+            "Y": [ 211, 212 ]
+          }
+        },
+        "$procmux$47": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x" ],
+            "B": [ 211, 212 ],
+            "S": [ 213 ],
+            "Y": [ 214, 215 ]
+          }
+        },
+        "$procmux$48_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3 ],
+            "B": [ "1", "1" ],
+            "Y": [ 213 ]
+          }
+        },
+        "$procmux$50": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:33.18-33.39|{workspace}/lab/source/Lab2_Task4.v:33.14-44.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 198, 199 ],
+            "B": [ "0", "0" ],
+            "S": [ 182 ],
+            "Y": [ 216, 217 ]
+          }
+        },
+        "$procmux$53": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:29.13-29.37|{workspace}/lab/source/Lab2_Task4.v:29.9-44.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 216, 217 ],
+            "B": [ "x", "x" ],
+            "S": [ 188 ],
+            "Y": [ 218, 219 ]
+          }
+        },
+        "$procmux$55": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x" ],
+            "B": [ 218, 219 ],
+            "S": [ 220 ],
+            "Y": [ 221, 222 ]
+          }
+        },
+        "$procmux$56_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3 ],
+            "B": [ "1", "1" ],
+            "Y": [ 220 ]
+          }
+        },
+        "$procmux$58": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:29.13-29.37|{workspace}/lab/source/Lab2_Task4.v:29.9-44.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 221, 222 ],
+            "B": [ "0", "0" ],
+            "S": [ 188 ],
+            "Y": [ 223, 224 ]
+          }
+        },
+        "$procmux$60": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x" ],
+            "B": [ 223, 224 ],
+            "S": [ 225 ],
+            "Y": [ 226, 227 ]
+          }
+        },
+        "$procmux$61_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3 ],
+            "B": [ "1", "1" ],
+            "Y": [ 225 ]
+          }
+        },
+        "$procmux$63": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:29.13-29.37|{workspace}/lab/source/Lab2_Task4.v:29.9-44.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 214, 215 ],
+            "B": [ "0", "0" ],
+            "S": [ 188 ],
+            "Y": [ 228, 229 ]
+          }
+        },
+        "$procmux$65": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x" ],
+            "B": [ 228, 229 ],
+            "S": [ 230 ],
+            "Y": [ 231, 232 ]
+          }
+        },
+        "$procmux$66_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3 ],
+            "B": [ "1", "1" ],
+            "Y": [ 230 ]
+          }
+        },
+        "$procmux$67": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000100",
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x" ],
+            "B": [ 226, 227, "0", "0", 233, 234, "0", "0" ],
+            "S": [ 235, 236, 237, 238 ],
+            "Y": [ 22, 23 ]
+          }
+        },
+        "$procmux$68_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3 ],
+            "B": [ "1", "1" ],
+            "Y": [ 235 ]
+          }
+        },
+        "$procmux$69_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3 ],
+            "B": [ "0", "1" ],
+            "Y": [ 236 ]
+          }
+        },
+        "$procmux$70_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3 ],
+            "B": [ "1", "0" ],
+            "Y": [ 237 ]
+          }
+        },
+        "$procmux$71_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3 ],
+            "Y": [ 238 ]
+          }
+        },
+        "$procmux$72": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000100",
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x" ],
+            "B": [ 231, 232, 239, 240, "0", "0", "0", "0" ],
+            "S": [ 241, 242, 243, 244 ],
+            "Y": [ 20, 21 ]
+          }
+        },
+        "$procmux$73_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3 ],
+            "B": [ "1", "1" ],
+            "Y": [ 241 ]
+          }
+        },
+        "$procmux$74_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3 ],
+            "B": [ "0", "1" ],
+            "Y": [ 242 ]
+          }
+        },
+        "$procmux$75_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3 ],
+            "B": [ "1", "0" ],
+            "Y": [ 243 ]
+          }
+        },
+        "$procmux$76_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3 ],
+            "Y": [ 244 ]
+          }
+        },
+        "$procmux$78_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3 ],
+            "B": [ "1", "1" ],
+            "Y": [ 245 ]
+          }
+        },
+        "$procmux$79_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3 ],
+            "B": [ "0", "1" ],
+            "Y": [ 88 ]
+          }
+        },
+        "$procmux$80_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3 ],
+            "B": [ "1", "0" ],
+            "Y": [ 89 ]
+          }
+        },
+        "$procmux$81_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/lab/source/Lab2_Task4.v:0.0-0.0|{workspace}/lab/source/Lab2_Task4.v:14.5-50.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3 ],
+            "Y": [ 90 ]
+          }
+        },
+        "$sub${workspace}/lab/source/Lab2_Task4.v:13$2": {
+          "hide_name": 1,
+          "type": "$sub",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000001",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000001",
+            "B_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:13.24-13.64"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4, 5, 6, 7, 8, 9, 10, 11 ],
+            "B": [ 12, 13, 14, 15, 16, 17, 18, 19 ],
+            "Y": [ 109, 110, 111, 112, 113, 114, 115, 116 ]
+          }
+        },
+        "$ternary${workspace}/lab/source/Lab2_Task4.v:21$4": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:21.18-21.51"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "B": [ "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "S": [ 184 ],
+            "Y": [ 233, 234, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275 ]
+          }
+        },
+        "$ternary${workspace}/lab/source/Lab2_Task4.v:25$6": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:25.25-25.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "B": [ "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "S": [ 181 ],
+            "Y": [ 239, 240, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305 ]
+          }
+        },
+        "$ternary${workspace}/lab/source/Lab2_Task4.v:28$12": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:28.32-28.95"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148 ],
+            "B": [ 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87 ],
+            "S": [ 187 ],
+            "Y": [ 92, 93, 94, 95, 96, 97, 98, 99, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329 ]
+          }
+        },
+        "$ternary${workspace}/lab/source/Lab2_Task4.v:35$16": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:35.27-35.58"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "B": [ "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "S": [ 183 ],
+            "Y": [ 207, 208, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359 ]
+          }
+        },
+        "$ternary${workspace}/lab/source/Lab2_Task4.v:39$19": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:39.20-39.53"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "B": [ "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "S": [ 186 ],
+            "Y": [ 189, 190, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\abs_diff_temperature[7:0]": {
+          "hide_name": 1,
+          "bits": [ 92, 93, 94, 95, 96, 97, 98, 99 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:12.3-51.6"
+          }
+        },
+        "$0\\air_condition[1:0]": {
+          "hide_name": 1,
+          "bits": [ 20, 21 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:12.3-51.6"
+          }
+        },
+        "$0\\diff_temperature[7:0]": {
+          "hide_name": 1,
+          "bits": [ 109, 110, 111, 112, 113, 114, 115, 116 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:12.3-51.6"
+          }
+        },
+        "$0\\heater[1:0]": {
+          "hide_name": 1,
+          "bits": [ 22, 23 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:12.3-51.6"
+          }
+        },
+        "$1\\abs_diff_temperature[7:0]": {
+          "hide_name": 1,
+          "bits": [ 92, 93, 94, 95, 96, 97, 98, 99 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:12.3-51.6"
+          }
+        },
+        "$1\\air_condition[1:0]": {
+          "hide_name": 1,
+          "bits": [ 20, 21 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:12.3-51.6"
+          }
+        },
+        "$1\\heater[1:0]": {
+          "hide_name": 1,
+          "bits": [ 22, 23 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:12.3-51.6"
+          }
+        },
+        "$2\\air_condition[1:0]": {
+          "hide_name": 1,
+          "bits": [ 231, 232 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:12.3-51.6"
+          }
+        },
+        "$2\\heater[1:0]": {
+          "hide_name": 1,
+          "bits": [ 226, 227 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:12.3-51.6"
+          }
+        },
+        "$3\\air_condition[1:0]": {
+          "hide_name": 1,
+          "bits": [ 214, 215 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:12.3-51.6"
+          }
+        },
+        "$3\\heater[1:0]": {
+          "hide_name": 1,
+          "bits": [ 221, 222 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:12.3-51.6"
+          }
+        },
+        "$4\\air_condition[1:0]": {
+          "hide_name": 1,
+          "bits": [ 205, 206 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:12.3-51.6"
+          }
+        },
+        "$4\\heater[1:0]": {
+          "hide_name": 1,
+          "bits": [ 198, 199 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:12.3-51.6"
+          }
+        },
+        "$add${workspace}/lab/source/Lab2_Task4.v:28$10_Y": {
+          "hide_name": 1,
+          "bits": [ 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87 ],
+          "signed": 1,
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:28.55-28.76"
+          }
+        },
+        "$auto$rtlil.cc:2739:Not$98": {
+          "hide_name": 1,
+          "bits": [ 108 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:2743:ReduceOr$85": {
+          "hide_name": 1,
+          "bits": [ "1" ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:2743:ReduceOr$89": {
+          "hide_name": 1,
+          "bits": [ "1" ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:2743:ReduceOr$93": {
+          "hide_name": 1,
+          "bits": [ "1" ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:2743:ReduceOr$97": {
+          "hide_name": 1,
+          "bits": [ 91 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:2786:And$87": {
+          "hide_name": 1,
+          "bits": [ 88 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:2786:And$91": {
+          "hide_name": 1,
+          "bits": [ 89 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:2786:And$95": {
+          "hide_name": 1,
+          "bits": [ 90 ],
+          "attributes": {
+          }
+        },
+        "$extend${workspace}/lab/source/Lab2_Task4.v:28$11_Y": {
+          "hide_name": 1,
+          "bits": [ 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148 ],
+          "signed": 1,
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:28.32-28.95"
+          }
+        },
+        "$extend${workspace}/lab/source/Lab2_Task4.v:28$8_Y": {
+          "hide_name": 1,
+          "bits": [ 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180 ],
+          "signed": 1,
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:28.55-28.72"
+          }
+        },
+        "$ge${workspace}/lab/source/Lab2_Task4.v:25$5_Y": {
+          "hide_name": 1,
+          "bits": [ 181 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:25.26-25.47"
+          }
+        },
+        "$ge${workspace}/lab/source/Lab2_Task4.v:33$14_Y": {
+          "hide_name": 1,
+          "bits": [ 182 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:33.18-33.39"
+          }
+        },
+        "$ge${workspace}/lab/source/Lab2_Task4.v:35$15_Y": {
+          "hide_name": 1,
+          "bits": [ 183 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:35.28-35.49"
+          }
+        },
+        "$le${workspace}/lab/source/Lab2_Task4.v:21$3_Y": {
+          "hide_name": 1,
+          "bits": [ 184 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:21.19-21.42"
+          }
+        },
+        "$le${workspace}/lab/source/Lab2_Task4.v:37$17_Y": {
+          "hide_name": 1,
+          "bits": [ 185 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:37.18-37.40"
+          }
+        },
+        "$le${workspace}/lab/source/Lab2_Task4.v:39$18_Y": {
+          "hide_name": 1,
+          "bits": [ 186 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:39.21-39.44"
+          }
+        },
+        "$lt${workspace}/lab/source/Lab2_Task4.v:28$7_Y": {
+          "hide_name": 1,
+          "bits": [ 187 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:28.32-28.52"
+          }
+        },
+        "$lt${workspace}/lab/source/Lab2_Task4.v:29$13_Y": {
+          "hide_name": 1,
+          "bits": [ 188 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:29.13-29.37"
+          }
+        },
+        "$not${workspace}/lab/source/Lab2_Task4.v:28$9_Y": {
+          "hide_name": 1,
+          "bits": [ 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55 ],
+          "signed": 1,
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:28.55-28.72"
+          }
+        },
+        "$procmux$21_Y": {
+          "hide_name": 1,
+          "bits": [ 191, 192 ],
+          "attributes": {
+          }
+        },
+        "$procmux$22_CMP": {
+          "hide_name": 1,
+          "bits": [ 185 ],
+          "attributes": {
+          }
+        },
+        "$procmux$24_Y": {
+          "hide_name": 1,
+          "bits": [ 193, 194 ],
+          "attributes": {
+          }
+        },
+        "$procmux$25_CMP": {
+          "hide_name": 1,
+          "bits": [ 182 ],
+          "attributes": {
+          }
+        },
+        "$procmux$27_Y": {
+          "hide_name": 1,
+          "bits": [ 195, 196 ],
+          "attributes": {
+          }
+        },
+        "$procmux$28_CMP": {
+          "hide_name": 1,
+          "bits": [ 188 ],
+          "attributes": {
+          }
+        },
+        "$procmux$29_Y": {
+          "hide_name": 1,
+          "bits": [ 198, 199 ],
+          "attributes": {
+          }
+        },
+        "$procmux$30_CMP": {
+          "hide_name": 1,
+          "bits": [ 197 ],
+          "attributes": {
+          }
+        },
+        "$procmux$34_Y": {
+          "hide_name": 1,
+          "bits": [ 200, 201 ],
+          "attributes": {
+          }
+        },
+        "$procmux$35_CMP": {
+          "hide_name": 1,
+          "bits": [ 182 ],
+          "attributes": {
+          }
+        },
+        "$procmux$37_Y": {
+          "hide_name": 1,
+          "bits": [ 202, 203 ],
+          "attributes": {
+          }
+        },
+        "$procmux$38_CMP": {
+          "hide_name": 1,
+          "bits": [ 188 ],
+          "attributes": {
+          }
+        },
+        "$procmux$39_Y": {
+          "hide_name": 1,
+          "bits": [ 205, 206 ],
+          "attributes": {
+          }
+        },
+        "$procmux$40_CMP": {
+          "hide_name": 1,
+          "bits": [ 204 ],
+          "attributes": {
+          }
+        },
+        "$procmux$42_Y": {
+          "hide_name": 1,
+          "bits": [ 209, 210 ],
+          "attributes": {
+          }
+        },
+        "$procmux$43_CMP": {
+          "hide_name": 1,
+          "bits": [ 182 ],
+          "attributes": {
+          }
+        },
+        "$procmux$45_Y": {
+          "hide_name": 1,
+          "bits": [ 211, 212 ],
+          "attributes": {
+          }
+        },
+        "$procmux$46_CMP": {
+          "hide_name": 1,
+          "bits": [ 188 ],
+          "attributes": {
+          }
+        },
+        "$procmux$47_Y": {
+          "hide_name": 1,
+          "bits": [ 214, 215 ],
+          "attributes": {
+          }
+        },
+        "$procmux$48_CMP": {
+          "hide_name": 1,
+          "bits": [ 213 ],
+          "attributes": {
+          }
+        },
+        "$procmux$50_Y": {
+          "hide_name": 1,
+          "bits": [ 216, 217 ],
+          "attributes": {
+          }
+        },
+        "$procmux$51_CMP": {
+          "hide_name": 1,
+          "bits": [ 182 ],
+          "attributes": {
+          }
+        },
+        "$procmux$53_Y": {
+          "hide_name": 1,
+          "bits": [ 218, 219 ],
+          "attributes": {
+          }
+        },
+        "$procmux$54_CMP": {
+          "hide_name": 1,
+          "bits": [ 188 ],
+          "attributes": {
+          }
+        },
+        "$procmux$55_Y": {
+          "hide_name": 1,
+          "bits": [ 221, 222 ],
+          "attributes": {
+          }
+        },
+        "$procmux$56_CMP": {
+          "hide_name": 1,
+          "bits": [ 220 ],
+          "attributes": {
+          }
+        },
+        "$procmux$58_Y": {
+          "hide_name": 1,
+          "bits": [ 223, 224 ],
+          "attributes": {
+          }
+        },
+        "$procmux$59_CMP": {
+          "hide_name": 1,
+          "bits": [ 188 ],
+          "attributes": {
+          }
+        },
+        "$procmux$60_Y": {
+          "hide_name": 1,
+          "bits": [ 226, 227 ],
+          "attributes": {
+          }
+        },
+        "$procmux$61_CMP": {
+          "hide_name": 1,
+          "bits": [ 225 ],
+          "attributes": {
+          }
+        },
+        "$procmux$63_Y": {
+          "hide_name": 1,
+          "bits": [ 228, 229 ],
+          "attributes": {
+          }
+        },
+        "$procmux$64_CMP": {
+          "hide_name": 1,
+          "bits": [ 188 ],
+          "attributes": {
+          }
+        },
+        "$procmux$65_Y": {
+          "hide_name": 1,
+          "bits": [ 231, 232 ],
+          "attributes": {
+          }
+        },
+        "$procmux$66_CMP": {
+          "hide_name": 1,
+          "bits": [ 230 ],
+          "attributes": {
+          }
+        },
+        "$procmux$67_Y": {
+          "hide_name": 1,
+          "bits": [ 22, 23 ],
+          "attributes": {
+          }
+        },
+        "$procmux$68_CMP": {
+          "hide_name": 1,
+          "bits": [ 235 ],
+          "attributes": {
+          }
+        },
+        "$procmux$69_CMP": {
+          "hide_name": 1,
+          "bits": [ 236 ],
+          "attributes": {
+          }
+        },
+        "$procmux$70_CMP": {
+          "hide_name": 1,
+          "bits": [ 237 ],
+          "attributes": {
+          }
+        },
+        "$procmux$71_CMP": {
+          "hide_name": 1,
+          "bits": [ 238 ],
+          "attributes": {
+          }
+        },
+        "$procmux$72_Y": {
+          "hide_name": 1,
+          "bits": [ 20, 21 ],
+          "attributes": {
+          }
+        },
+        "$procmux$73_CMP": {
+          "hide_name": 1,
+          "bits": [ 241 ],
+          "attributes": {
+          }
+        },
+        "$procmux$74_CMP": {
+          "hide_name": 1,
+          "bits": [ 242 ],
+          "attributes": {
+          }
+        },
+        "$procmux$75_CMP": {
+          "hide_name": 1,
+          "bits": [ 243 ],
+          "attributes": {
+          }
+        },
+        "$procmux$76_CMP": {
+          "hide_name": 1,
+          "bits": [ 244 ],
+          "attributes": {
+          }
+        },
+        "$procmux$77_Y": {
+          "hide_name": 1,
+          "bits": [ 92, 93, 94, 95, 96, 97, 98, 99 ],
+          "attributes": {
+          }
+        },
+        "$procmux$78_CMP": {
+          "hide_name": 1,
+          "bits": [ 245 ],
+          "attributes": {
+          }
+        },
+        "$procmux$79_CMP": {
+          "hide_name": 1,
+          "bits": [ 88 ],
+          "attributes": {
+          }
+        },
+        "$procmux$80_CMP": {
+          "hide_name": 1,
+          "bits": [ 89 ],
+          "attributes": {
+          }
+        },
+        "$procmux$81_CMP": {
+          "hide_name": 1,
+          "bits": [ 90 ],
+          "attributes": {
+          }
+        },
+        "$sub${workspace}/lab/source/Lab2_Task4.v:13$2_Y": {
+          "hide_name": 1,
+          "bits": [ 109, 110, 111, 112, 113, 114, 115, 116 ],
+          "signed": 1,
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:13.24-13.64"
+          }
+        },
+        "$ternary${workspace}/lab/source/Lab2_Task4.v:21$4_Y": {
+          "hide_name": 1,
+          "bits": [ 233, 234, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275 ],
+          "signed": 1,
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:21.18-21.51"
+          }
+        },
+        "$ternary${workspace}/lab/source/Lab2_Task4.v:25$6_Y": {
+          "hide_name": 1,
+          "bits": [ 239, 240, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305 ],
+          "signed": 1,
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:25.25-25.56"
+          }
+        },
+        "$ternary${workspace}/lab/source/Lab2_Task4.v:28$12_Y": {
+          "hide_name": 1,
+          "bits": [ 92, 93, 94, 95, 96, 97, 98, 99, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329 ],
+          "signed": 1,
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:28.32-28.95"
+          }
+        },
+        "$ternary${workspace}/lab/source/Lab2_Task4.v:35$16_Y": {
+          "hide_name": 1,
+          "bits": [ 207, 208, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359 ],
+          "signed": 1,
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:35.27-35.58"
+          }
+        },
+        "$ternary${workspace}/lab/source/Lab2_Task4.v:39$19_Y": {
+          "hide_name": 1,
+          "bits": [ 189, 190, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389 ],
+          "signed": 1,
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:39.20-39.53"
+          }
+        },
+        "abs_diff_temperature": {
+          "hide_name": 0,
+          "bits": [ 100, 101, 102, 103, 104, 105, 106, 107 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:10.13-10.33"
+          }
+        },
+        "air_condition": {
+          "hide_name": 0,
+          "bits": [ 20, 21 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:5.22-5.35"
+          }
+        },
+        "current_temperature": {
+          "hide_name": 0,
+          "bits": [ 4, 5, 6, 7, 8, 9, 10, 11 ],
+          "signed": 1,
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:3.24-3.43"
+          }
+        },
+        "diff_temperature": {
+          "hide_name": 0,
+          "bits": [ 109, 110, 111, 112, 113, 114, 115, 116 ],
+          "signed": 1,
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:9.20-9.36"
+          }
+        },
+        "heater": {
+          "hide_name": 0,
+          "bits": [ 22, 23 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:6.22-6.28"
+          }
+        },
+        "mode": {
+          "hide_name": 0,
+          "bits": [ 2, 3 ],
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:2.17-2.21"
+          }
+        },
+        "target_temperature": {
+          "hide_name": 0,
+          "bits": [ 12, 13, 14, 15, 16, 17, 18, 19 ],
+          "signed": 1,
+          "attributes": {
+            "src": "{workspace}/lab/source/Lab2_Task4.v:4.24-4.42"
+          }
+        }
+      }
+    }
+  }
+}

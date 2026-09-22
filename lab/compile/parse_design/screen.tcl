@@ -1,0 +1,1 @@
+.rtl_screen -top_module {Lab2_Task1} -include_path {<C:/Users/Admin/Workspace/DIC-demo/lab>} -design_files {<C:/Users/Admin/Workspace/DIC-demo/lab/source/Lab2_Task1.v|work><C:/Users/Admin/Workspace/DIC-demo/lab/source/Lab2_Task2.v|work><C:/Users/Admin/Workspace/DIC-demo/lab/source/Lab2_Task3.v|work><C:/Users/Admin/Workspace/DIC-demo/lab/source/Lab2_Task4.v|work>}

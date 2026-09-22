@@ -1,0 +1,57 @@
+$date
+	Fri Sep 18 13:22:29 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_Test $end
+$var wire 1 ! out_x $end
+$var wire 1 " out_o $end
+$var wire 1 # out_a $end
+$var reg 1 $ a $end
+$var reg 1 % b $end
+$scope module uut $end
+$var wire 1 $ a $end
+$var wire 1 % b $end
+$var wire 1 & c $end
+$var wire 1 # out_and $end
+$var wire 1 " out_or $end
+$var wire 1 ! out_xor $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+x&
+x%
+x$
+x#
+x"
+x!
+$end
+#100000
+0#
+0"
+0!
+0&
+0%
+0$
+#200000
+1"
+1!
+1$
+#300000
+1%
+0$
+#400000
+1#
+0!
+1&
+1$
+#500000

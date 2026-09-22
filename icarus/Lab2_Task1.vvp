@@ -1,0 +1,64 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "14.0 (devel)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\PROGRA~1\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\PROGRA~1\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\PROGRA~1\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\PROGRA~1\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\PROGRA~1\iverilog\lib\ivl\va_math.vpi";
+:vpi_module "C:\PROGRA~1\iverilog\lib\ivl\v2009.vpi";
+S_0000023BE2F5C870 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0000023BE2F5CA00 .scope module, "Lab2_Task1" "Lab2_Task1" 3 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 3 "in";
+    .port_info 1 /OUTPUT 2 "out";
+L_0000023BE2F99210 .functor XOR 1, L_0000023BE2F88880, L_0000023BE2F88BA0, C4<0>, C4<0>;
+L_0000023BE2F98FE0 .functor XOR 1, L_0000023BE2FE3A20, L_0000023BE2FE3660, C4<0>, C4<0>;
+L_0000023BE2F99280 .functor AND 1, L_0000023BE2FE3700, L_0000023BE2FE42E0, C4<1>, C4<1>;
+L_0000023BE2F99050 .functor AND 1, L_0000023BE2FE2E40, L_0000023BE2FE2F80, C4<1>, C4<1>;
+L_0000023BE2F993D0 .functor OR 1, L_0000023BE2FE37A0, L_0000023BE2FE3AC0, C4<0>, C4<0>;
+L_0000023BE2F98E20 .functor BUFZ 1, L_0000023BE2F993D0, C4<0>, C4<0>, C4<0>;
+v0000023BE2F88420_0 .net *"_ivl_12", 0 0, L_0000023BE2FE3A20;  1 drivers
+v0000023BE2F88380_0 .net *"_ivl_14", 0 0, L_0000023BE2FE3660;  1 drivers
+v0000023BE2F87E80_0 .net *"_ivl_15", 0 0, L_0000023BE2F98FE0;  1 drivers
+v0000023BE2F88600_0 .net *"_ivl_20", 0 0, L_0000023BE2FE3700;  1 drivers
+v0000023BE2F88CE0_0 .net *"_ivl_22", 0 0, L_0000023BE2FE42E0;  1 drivers
+v0000023BE2F88060_0 .net *"_ivl_23", 0 0, L_0000023BE2F99280;  1 drivers
+v0000023BE2F88C40_0 .net *"_ivl_29", 0 0, L_0000023BE2FE2E40;  1 drivers
+v0000023BE2F88100_0 .net *"_ivl_3", 0 0, L_0000023BE2F88880;  1 drivers
+v0000023BE2F881A0_0 .net *"_ivl_31", 0 0, L_0000023BE2FE2F80;  1 drivers
+v0000023BE2F889C0_0 .net *"_ivl_32", 0 0, L_0000023BE2F99050;  1 drivers
+v0000023BE2F88240_0 .net *"_ivl_35", 0 0, L_0000023BE2FE37A0;  1 drivers
+v0000023BE2F886A0_0 .net *"_ivl_37", 0 0, L_0000023BE2FE3AC0;  1 drivers
+v0000023BE2F882E0_0 .net *"_ivl_43", 0 0, L_0000023BE2FE4560;  1 drivers
+v0000023BE2F88B00_0 .net *"_ivl_48", 0 0, L_0000023BE2F98E20;  1 drivers
+v0000023BE2F884C0_0 .net *"_ivl_5", 0 0, L_0000023BE2F88BA0;  1 drivers
+v0000023BE2F88560_0 .net *"_ivl_6", 0 0, L_0000023BE2F99210;  1 drivers
+v0000023BE2F88920_0 .net "d_and", 1 0, L_0000023BE2FE3980;  1 drivers
+v0000023BE2F88740_0 .net "d_or", 0 0, L_0000023BE2F993D0;  1 drivers
+v0000023BE2F87DE0_0 .net "d_xor", 1 0, L_0000023BE2FE35C0;  1 drivers
+o0000023BE2F9C368 .functor BUFZ 3, c4<zzz>; HiZ drive
+v0000023BE2F88A60_0 .net "in", 2 0, o0000023BE2F9C368;  0 drivers
+v0000023BE2F887E0_0 .net "out", 1 0, L_0000023BE2FE3020;  1 drivers
+L_0000023BE2F88880 .part o0000023BE2F9C368, 0, 1;
+L_0000023BE2F88BA0 .part o0000023BE2F9C368, 1, 1;
+L_0000023BE2FE35C0 .concat8 [ 1 1 0 0], L_0000023BE2F99210, L_0000023BE2F98FE0;
+L_0000023BE2FE3A20 .part L_0000023BE2FE35C0, 0, 1;
+L_0000023BE2FE3660 .part o0000023BE2F9C368, 2, 1;
+L_0000023BE2FE3700 .part L_0000023BE2FE35C0, 0, 1;
+L_0000023BE2FE42E0 .part o0000023BE2F9C368, 2, 1;
+L_0000023BE2FE3980 .concat8 [ 1 1 0 0], L_0000023BE2F99280, L_0000023BE2F99050;
+L_0000023BE2FE2E40 .part o0000023BE2F9C368, 0, 1;
+L_0000023BE2FE2F80 .part o0000023BE2F9C368, 1, 1;
+L_0000023BE2FE37A0 .part L_0000023BE2FE3980, 0, 1;
+L_0000023BE2FE3AC0 .part L_0000023BE2FE3980, 1, 1;
+L_0000023BE2FE4560 .part L_0000023BE2FE35C0, 1, 1;
+L_0000023BE2FE3020 .concat8 [ 1 1 0 0], L_0000023BE2FE4560, L_0000023BE2F98E20;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "c:/Users/Admin/Workspace/DIC-demo/lab/source/Lab2_Task1.v";

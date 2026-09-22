@@ -1,0 +1,78 @@
+$date
+	Mon Sep 21 11:28:02 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_Lab2_Task1 $end
+$var wire 2 ! o [1:0] $end
+$var reg 3 " i [2:0] $end
+$scope module uut $end
+$var wire 1 # d_or $end
+$var wire 3 $ in [2:0] $end
+$var wire 2 % out [1:0] $end
+$var wire 2 & d_xor [1:0] $end
+$var wire 2 ' d_and [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 '
+b0 &
+b0 %
+b0 $
+0#
+b0 "
+b0 !
+$end
+#100000
+b1 !
+b1 %
+b11 &
+b1 "
+b1 $
+#200000
+b10 "
+b10 $
+#300000
+b10 !
+b10 %
+1#
+b0 &
+b10 '
+b11 "
+b11 $
+#400000
+b1 !
+b1 %
+0#
+b10 &
+b0 '
+b100 "
+b100 $
+#500000
+b10 !
+b10 %
+1#
+b1 '
+b1 &
+b101 "
+b101 $
+#600000
+b110 "
+b110 $
+#700000
+b11 !
+b11 %
+b10 &
+b10 '
+b111 "
+b111 $
+#800000

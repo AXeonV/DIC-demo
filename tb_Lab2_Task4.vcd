@@ -1,0 +1,150 @@
+$date
+	Mon Sep 21 13:07:57 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_Lab2_Task4 $end
+$var wire 2 ! heater [1:0] $end
+$var wire 2 " air_condition [1:0] $end
+$var reg 8 # current_temperature [7:0] $end
+$var reg 2 $ mode [1:0] $end
+$var reg 8 % target_temperature [7:0] $end
+$scope module uut $end
+$var wire 8 & current_temperature [7:0] $end
+$var wire 2 ' mode [1:0] $end
+$var wire 8 ( target_temperature [7:0] $end
+$var reg 8 ) abs_diff_temperature [7:0] $end
+$var reg 2 * air_condition [1:0] $end
+$var reg 8 + diff_temperature [7:0] $end
+$var reg 2 , heater [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 ,
+b101 +
+b0 *
+bx )
+b10100 (
+b0 '
+b11001 &
+b10100 %
+b0 $
+b11001 #
+b0 "
+b0 !
+$end
+#100000
+b10 !
+b10 ,
+b11111011 +
+b1111 #
+b1111 &
+b1 $
+b1 '
+#200000
+b1 !
+b1 ,
+b11111100 +
+b10000 #
+b10000 &
+#300000
+b0 +
+b10100 #
+b10100 &
+#400000
+b101 +
+b11001 #
+b11001 &
+#500000
+b10 "
+b10 *
+b0 !
+b0 ,
+b10 $
+b10 '
+#600000
+b1 "
+b1 *
+b100 +
+b11000 #
+b11000 &
+#700000
+b0 +
+b10100 #
+b10100 &
+#800000
+b11111011 +
+b1111 #
+b1111 &
+#900000
+b0 "
+b0 *
+b0 )
+b0 +
+b10100 #
+b10100 &
+b11 $
+b11 '
+#1000000
+b1 "
+b1 *
+b1 )
+b1 +
+b10101 #
+b10101 &
+#1100000
+b100 )
+b100 +
+b11000 #
+b11000 &
+#1200000
+b10 "
+b10 *
+b101 )
+b101 +
+b11001 #
+b11001 &
+#1300000
+b1 !
+b1 ,
+b0 "
+b0 *
+b1 )
+b11111111 +
+b10011 #
+b10011 &
+#1400000
+b100 )
+b11111100 +
+b10000 #
+b10000 &
+#1500000
+b10 !
+b10 ,
+b101 )
+b11111011 +
+b1111 #
+b1111 &
+#1600000
+b11110110 %
+b11110110 (
+b11110001 #
+b11110001 &
+#1700000
+b10 "
+b10 *
+b0 !
+b0 ,
+b101 +
+b11111011 #
+b11111011 &
+#1800000

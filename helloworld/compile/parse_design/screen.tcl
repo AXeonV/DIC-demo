@@ -1,0 +1,1 @@
+.rtl_screen -top_module {Test} -include_path {<C:/Users/Admin/Workspace/DIC-demo/helloworld>} -design_files {<C:/Users/Admin/Workspace/DIC-demo/helloworld/source/Test.v|work>}

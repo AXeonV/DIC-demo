@@ -1,0 +1,4 @@
+read_verilog -sv -formal -overwrite {workspace}/lab/source/Lab2_Task3.v
+read_verilog -sv -formal -overwrite {workspace}/lab/source/tb_Lab2_Task3.v
+design -reset-vlog; proc;
+write_json {workspace}/netlist/tb_Lab2_Task3.json

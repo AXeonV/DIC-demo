@@ -1,0 +1,121 @@
+$date
+	Mon Sep 21 13:02:12 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_Lab2_Task3 $end
+$var wire 8 ! min [7:0] $end
+$var wire 8 " max [7:0] $end
+$var reg 8 # a [7:0] $end
+$var reg 8 $ b [7:0] $end
+$var reg 8 % c [7:0] $end
+$var reg 8 & d [7:0] $end
+$scope module uut $end
+$var wire 8 ' a [7:0] $end
+$var wire 8 ( b [7:0] $end
+$var wire 8 ) c [7:0] $end
+$var wire 8 * d [7:0] $end
+$var reg 8 + max [7:0] $end
+$var reg 8 , max1 [7:0] $end
+$var reg 8 - max2 [7:0] $end
+$var reg 8 . min [7:0] $end
+$var reg 8 / min1 [7:0] $end
+$var reg 8 0 min2 [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b11110 0
+b1010 /
+b1010 .
+b101000 -
+b10100 ,
+b101000 +
+b101000 *
+b11110 )
+b10100 (
+b1010 '
+b101000 &
+b11110 %
+b10100 $
+b1010 #
+b101000 "
+b1010 !
+$end
+#100000
+b11001000 "
+b11001000 +
+b110010 !
+b110010 .
+b1100100 -
+b11001000 ,
+b110010 0
+b10010110 /
+b110010 &
+b110010 *
+b1100100 %
+b1100100 )
+b10010110 $
+b10010110 (
+b11001000 #
+b11001000 '
+#200000
+b1011000 "
+b1011000 +
+b1011000 !
+b1011000 .
+b1011000 -
+b1011000 ,
+b1011000 0
+b1011000 /
+b1011000 &
+b1011000 *
+b1011000 %
+b1011000 )
+b1011000 $
+b1011000 (
+b1011000 #
+b1011000 '
+#300000
+b11111111 "
+b11111111 +
+b0 !
+b0 .
+b10000000 -
+b11111111 ,
+b1111111 0
+b0 /
+b10000000 &
+b10000000 *
+b1111111 %
+b1111111 )
+b11111111 $
+b11111111 (
+b0 #
+b0 '
+#400000
+b11001001 "
+b11001001 +
+b1100 !
+b1100 .
+b11001001 -
+b1001001 ,
+b1100011 0
+b1100 /
+b1100011 &
+b1100011 *
+b11001001 %
+b11001001 )
+b1100 $
+b1100 (
+b1001001 #
+b1001001 '
+#500000
