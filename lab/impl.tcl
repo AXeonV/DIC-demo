@@ -26,3 +26,6 @@ add_design "C:/Users/Admin/Workspace/DIC-demo/lab/source/Lab2_Task4.v"
 add_simulation "C:/Users/Admin/Workspace/DIC-demo/lab/source/tb_Lab2_Task4.v"
 set_arch -family Logos -device PGL22G -speedgrade -6 -package MBG324
 compile -top_module Lab2_Task1
+set_arch -family Logos -device PGL22G -speedgrade -6 -package MBG324
+compile -top_module Lab2_Task1
+synthesize -ads -selected_syn_tool_opt 2 

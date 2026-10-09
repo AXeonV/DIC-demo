@@ -33,9 +33,9 @@
             <data>RAM(GB)</data>
         </column_headers>
         <row>
-            <data>0h:0m:0s</data>
-            <data>0h:0m:0s</data>
-            <data>0h:0m:3s</data>
+            <data>0h:0m:1s</data>
+            <data>0h:0m:1s</data>
+            <data>0h:0m:8s</data>
             <data>139</data>
             <data>WINDOWS 10 x86_64</data>
             <data>Unknown</data>

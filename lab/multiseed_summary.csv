@@ -7,11 +7,11 @@ single,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,N
 Pass Rate/Convergence Rate,0.00%,0.00%
 
 Synthesize:
-control_set,NA
+control_set,0
 Synthesize Performance Summary:
 slack category,Synthesize Setup WNS,Synthesize Setup TNS,Synthesize Recovery WNS,Synthesize Recovery TNS
 slack value,NA,NA,NA,NA
-Synthesize Process Cpu Time,NA
+Synthesize Process Cpu Time,0h:0m:1s
 
 Device Map:
 Device Map Resource Usage Summary:

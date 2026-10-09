@@ -1,0 +1,80 @@
+//
+// Generated (version 2022.2-SP6.4<build 146967>) at Fri Oct  9 11:06:48 2026
+//
+
+module Lab2_Task1
+(
+    input [2:0] in,
+    output [1:0] out
+);
+    wire [2:0] nt_in;
+    wire [1:0] nt_out;
+
+    GTP_GRS GRS_INST (
+            .GRS_N (1'b1));
+
+    GTP_LUT3 /* N2 */ #(
+            .INIT(8'b10010110))
+        N2 (
+            .Z (nt_out[0]),
+            .I0 (nt_in[0]),
+            .I1 (nt_in[1]),
+            .I2 (nt_in[2]));
+	// LUT = (I0&~I1&~I2)|(~I0&I1&~I2)|(~I0&~I1&I2)|(I0&I1&I2) ;
+	// ../source/Lab2_Task1.v:11
+
+    GTP_LUT3 /* N8 */ #(
+            .INIT(8'b11101000))
+        N8 (
+            .Z (nt_out[1]),
+            .I0 (nt_in[0]),
+            .I1 (nt_in[1]),
+            .I2 (nt_in[2]));
+	// LUT = (I0&I1)|(I0&I2)|(I1&I2) ;
+	// ../source/Lab2_Task1.v:14
+
+    GTP_INBUF /* \in_ibuf[0]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .TERM_DDR("ON"))
+        \in_ibuf[0]  (
+            .O (nt_in[0]),
+            .I (in[0]));
+	// ../source/Lab2_Task1.v:2
+
+    GTP_INBUF /* \in_ibuf[1]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .TERM_DDR("ON"))
+        \in_ibuf[1]  (
+            .O (nt_in[1]),
+            .I (in[1]));
+	// ../source/Lab2_Task1.v:2
+
+    GTP_INBUF /* \in_ibuf[2]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .TERM_DDR("ON"))
+        \in_ibuf[2]  (
+            .O (nt_in[2]),
+            .I (in[2]));
+	// ../source/Lab2_Task1.v:2
+
+    GTP_OUTBUF /* \out_obuf[0]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        \out_obuf[0]  (
+            .O (out[0]),
+            .I (nt_out[0]));
+	// ../source/Lab2_Task1.v:3
+
+    GTP_OUTBUF /* \out_obuf[1]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        \out_obuf[1]  (
+            .O (out[1]),
+            .I (nt_out[1]));
+	// ../source/Lab2_Task1.v:3
+
+
+endmodule
+
