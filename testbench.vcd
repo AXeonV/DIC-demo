@@ -1,0 +1,71 @@
+$date
+	Fri Oct 16 11:57:25 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_Lab3_Led_Key $end
+$var wire 8 ! leds [7:0] $end
+$var reg 4 " keys [3:0] $end
+$scope module uut $end
+$var wire 4 # keys [3:0] $end
+$var wire 8 $ leds [7:0] $end
+$var reg 3 % nums [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 %
+b11 $
+b0 #
+b0 "
+b11 !
+$end
+#100000
+b10010010 !
+b10010010 $
+b1 %
+b1 "
+b1 #
+#200000
+b10010001 !
+b10010001 $
+b10 "
+b10 #
+#300000
+b100000 !
+b100000 $
+b10 %
+b11 "
+b11 #
+#400000
+b10010111 !
+b10010111 $
+b1 %
+b100 "
+b100 #
+#500000
+b100110 !
+b100110 $
+b10 %
+b101 "
+b101 #
+#600000
+b100101 !
+b100101 $
+b110 "
+b110 #
+#700000
+b10110100 !
+b10110100 $
+b11 %
+b111 "
+b111 #
+#800000

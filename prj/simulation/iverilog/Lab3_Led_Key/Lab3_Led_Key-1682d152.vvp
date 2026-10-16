@@ -1,0 +1,69 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "14.0 (devel)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\PROGRA~1\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\PROGRA~1\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\PROGRA~1\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\PROGRA~1\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\PROGRA~1\iverilog\lib\ivl\va_math.vpi";
+:vpi_module "C:\PROGRA~1\iverilog\lib\ivl\v2009.vpi";
+S_0000021330485A80 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0000021330485C10 .scope module, "Lab3_Led_Key" "Lab3_Led_Key" 3 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "keys";
+    .port_info 1 /OUTPUT 8 "leds";
+L_0000021330462CD0 .functor NOT 2, L_00000213304BD9F0, C4<00>, C4<00>, C4<00>;
+L_0000021330462E90 .functor BUFZ 3, v00000213304BDE50_0, C4<000>, C4<000>, C4<000>;
+L_0000021330770088 .functor BUFT 1, C4<001>, C4<0>, C4<0>, C4<0>;
+L_00000213304630C0 .functor AND 3, v00000213304BDE50_0, L_0000021330770088, C4<111>, C4<111>;
+v00000213304C2E70_0 .net *"_ivl_13", 2 0, L_0000021330462E90;  1 drivers
+v0000021330485DA0_0 .net/2u *"_ivl_17", 2 0, L_0000021330770088;  1 drivers
+v0000021330485E40_0 .net *"_ivl_19", 2 0, L_00000213304630C0;  1 drivers
+v00000213304BCD20_0 .net *"_ivl_22", 0 0, L_00000213304BD810;  1 drivers
+v00000213304BCDC0_0 .net *"_ivl_3", 1 0, L_00000213304BD9F0;  1 drivers
+v00000213304BCE60_0 .net *"_ivl_4", 1 0, L_0000021330462CD0;  1 drivers
+v00000213304BDA90_0 .net *"_ivl_9", 1 0, L_00000213304BD4F0;  1 drivers
+o00000213304C3068 .functor BUFZ 4, c4<zzzz>; HiZ drive
+v00000213304BD8B0_0 .net "keys", 3 0, o00000213304C3068;  0 drivers
+v00000213304BD950_0 .net "leds", 7 0, L_00000213304BDB30;  1 drivers
+v00000213304BDE50_0 .var "nums", 2 0;
+E_00000213304AD890 .event anyedge, v00000213304BD8B0_0;
+L_00000213304BD9F0 .part o00000213304C3068, 0, 2;
+L_00000213304BD4F0 .part o00000213304C3068, 2, 2;
+L_00000213304BDB30 .concat8 [ 2 2 3 1], L_0000021330462CD0, L_00000213304BD4F0, L_0000021330462E90, L_00000213304BD810;
+L_00000213304BD810 .part L_00000213304630C0, 0, 1;
+    .scope S_0000021330485C10;
+T_0 ;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v00000213304BDE50_0, 0, 3;
+    %end;
+    .thread T_0, $init;
+    .scope S_0000021330485C10;
+T_1 ;
+    %wait E_00000213304AD890;
+    %load/vec4 v00000213304BD8B0_0;
+    %parti/s 1, 0, 2;
+    %pad/u 3;
+    %load/vec4 v00000213304BD8B0_0;
+    %parti/s 1, 1, 2;
+    %pad/u 3;
+    %add;
+    %load/vec4 v00000213304BD8B0_0;
+    %parti/s 1, 2, 3;
+    %pad/u 3;
+    %add;
+    %load/vec4 v00000213304BD8B0_0;
+    %parti/s 1, 3, 3;
+    %pad/u 3;
+    %add;
+    %store/vec4 v00000213304BDE50_0, 0, 3;
+    %jmp T_1;
+    .thread T_1, $push;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "C:\Users\Admin\Workspace\DIC-demo\lab3\source\Lab3_Led_Key.v";

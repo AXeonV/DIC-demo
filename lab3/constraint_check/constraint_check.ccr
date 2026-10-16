@@ -1,0 +1,51 @@
+##### Written on 2026/10/16 11:37:26 ###############################
+
+
+##### INFO ##################################################
+
+Current device : 
+	PGL22G-6MBG324
+
+Top Module : 
+	Lab3_Led_Key
+
+Constraint File(s) : 
+	C:/Users/Admin/Workspace/DIC-demo/lab3/source/Lab3_Led_Key.fdc
+
+##### SUMMARY ######################################################
+
+Found 0 error(s), 4 critical warning(s), 0 warning(s), out of 76 constraint(s)
+
+
+Inapplicable constraints(except overwritten constraints):
+********************************************
+
+define_attribute {p:leds[7]} {PAP_IO_LOC} {A8}
+	C: ConstraintEditor-2002: [C:/Users/Admin/Workspace/DIC-demo/lab3/source/Lab3_Led_Key.fdc(line number: 2)] | Port leds[7] has been placed at location A8, whose type is share pin.
+
+define_attribute {p:leds[6]} {PAP_IO_LOC} {C8}
+	C: ConstraintEditor-2002: [C:/Users/Admin/Workspace/DIC-demo/lab3/source/Lab3_Led_Key.fdc(line number: 10)] | Port leds[6] has been placed at location C8, whose type is share pin.
+
+define_attribute {p:leds[5]} {PAP_IO_LOC} {D8}
+	C: ConstraintEditor-2002: [C:/Users/Admin/Workspace/DIC-demo/lab3/source/Lab3_Led_Key.fdc(line number: 18)] | Port leds[5] has been placed at location D8, whose type is share pin.
+
+define_attribute {p:leds[4]} {PAP_IO_LOC} {E8}
+	C: ConstraintEditor-2002: [C:/Users/Admin/Workspace/DIC-demo/lab3/source/Lab3_Led_Key.fdc(line number: 26)] | Port leds[4] has been placed at location E8, whose type is share pin.
+
+
+Constraints with issues:
+********************************************
+
+
+Issues without commands:
+********************************************
+
+
+Unconstrained ports:
+********************************************
+
+
+Constraints with matching wildcard expressions:
+********************************************
+
+

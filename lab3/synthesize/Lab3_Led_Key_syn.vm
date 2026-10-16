@@ -1,0 +1,166 @@
+//
+// Generated (version 2022.2-SP6.4<build 146967>) at Fri Oct 16 11:37:26 2026
+//
+
+module Lab3_Led_Key
+(
+    input [3:0] keys,
+    output [7:0] leds
+);
+    wire [3:0] nt_keys;
+    wire [7:0] nt_leds;
+
+    GTP_GRS GRS_INST (
+            .GRS_N (1'b1));
+
+    GTP_LUT1 /* \N0[0]  */ #(
+            .INIT(2'b01))
+        \N0[0]  (
+            .Z (nt_leds[0]),
+            .I0 (nt_keys[0]));
+	// LUT = ~I0 ;
+
+    GTP_LUT1 /* \N0[1]  */ #(
+            .INIT(2'b01))
+        \N0[1]  (
+            .Z (nt_leds[1]),
+            .I0 (nt_keys[1]));
+	// LUT = ~I0 ;
+
+(* PAP_IO_DIRECTION="INPUT", PAP_IO_LOC="J3", PAP_IO_VCCIO="1.5", PAP_IO_STANDARD="LVCMOS15", PAP_IO_NONE="TRUE" *)    GTP_INBUF /* \keys_ibuf[0]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .TERM_DDR("ON"))
+        \keys_ibuf[0]  (
+            .O (nt_keys[0]),
+            .I (keys[0]));
+	// ../source/Lab3_Led_Key.v:2
+
+(* PAP_IO_DIRECTION="INPUT", PAP_IO_LOC="H1", PAP_IO_VCCIO="1.5", PAP_IO_STANDARD="LVCMOS15", PAP_IO_NONE="TRUE" *)    GTP_INBUF /* \keys_ibuf[1]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .TERM_DDR("ON"))
+        \keys_ibuf[1]  (
+            .O (nt_keys[1]),
+            .I (keys[1]));
+	// ../source/Lab3_Led_Key.v:2
+
+(* PAP_IO_DIRECTION="INPUT", PAP_IO_LOC="H3", PAP_IO_VCCIO="1.5", PAP_IO_STANDARD="LVCMOS15", PAP_IO_NONE="TRUE" *)    GTP_INBUF /* \keys_ibuf[2]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .TERM_DDR("ON"))
+        \keys_ibuf[2]  (
+            .O (nt_keys[2]),
+            .I (keys[2]));
+	// ../source/Lab3_Led_Key.v:2
+
+(* PAP_IO_DIRECTION="INPUT", PAP_IO_LOC="F1", PAP_IO_VCCIO="1.5", PAP_IO_STANDARD="LVCMOS15", PAP_IO_NONE="TRUE" *)    GTP_INBUF /* \keys_ibuf[3]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .TERM_DDR("ON"))
+        \keys_ibuf[3]  (
+            .O (nt_keys[3]),
+            .I (keys[3]));
+	// ../source/Lab3_Led_Key.v:2
+
+    GTP_LUT4 /* \leds_ac1[6:4]  */ #(
+            .INIT(16'b1000000000000000))
+        \leds_ac1[6:4]  (
+            .Z (nt_leds[6]),
+            .I0 (nt_keys[0]),
+            .I1 (nt_keys[1]),
+            .I2 (nt_keys[2]),
+            .I3 (nt_keys[3]));
+	// LUT = I0&I1&I2&I3 ;
+
+(* PAP_IO_DIRECTION="OUTPUT", PAP_IO_LOC="E5", PAP_IO_VCCIO="3.3", PAP_IO_STANDARD="LVCMOS33", PAP_IO_DRIVE="4", PAP_IO_NONE="TRUE", PAP_IO_SLEW="SLOW" *)    GTP_OUTBUF /* \leds_obuf[0]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        \leds_obuf[0]  (
+            .O (leds[0]),
+            .I (nt_leds[0]));
+	// ../source/Lab3_Led_Key.v:3
+
+(* PAP_IO_DIRECTION="OUTPUT", PAP_IO_LOC="E6", PAP_IO_VCCIO="3.3", PAP_IO_STANDARD="LVCMOS33", PAP_IO_DRIVE="4", PAP_IO_NONE="TRUE", PAP_IO_SLEW="SLOW" *)    GTP_OUTBUF /* \leds_obuf[1]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        \leds_obuf[1]  (
+            .O (leds[1]),
+            .I (nt_leds[1]));
+	// ../source/Lab3_Led_Key.v:3
+
+(* PAP_IO_DIRECTION="OUTPUT", PAP_IO_LOC="F7", PAP_IO_VCCIO="3.3", PAP_IO_STANDARD="LVCMOS33", PAP_IO_DRIVE="4", PAP_IO_NONE="TRUE", PAP_IO_SLEW="SLOW" *)    GTP_OUTBUF /* \leds_obuf[2]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        \leds_obuf[2]  (
+            .O (leds[2]),
+            .I (nt_keys[2]));
+	// ../source/Lab3_Led_Key.v:3
+
+(* PAP_IO_DIRECTION="OUTPUT", PAP_IO_LOC="F8", PAP_IO_VCCIO="3.3", PAP_IO_STANDARD="LVCMOS33", PAP_IO_DRIVE="4", PAP_IO_NONE="TRUE", PAP_IO_SLEW="SLOW" *)    GTP_OUTBUF /* \leds_obuf[3]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        \leds_obuf[3]  (
+            .O (leds[3]),
+            .I (nt_keys[3]));
+	// ../source/Lab3_Led_Key.v:3
+
+(* PAP_IO_DIRECTION="OUTPUT", PAP_IO_LOC="E8", PAP_IO_VCCIO="3.3", PAP_IO_STANDARD="LVCMOS33", PAP_IO_DRIVE="4", PAP_IO_NONE="TRUE", PAP_IO_SLEW="SLOW" *)    GTP_OUTBUF /* \leds_obuf[4]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        \leds_obuf[4]  (
+            .O (leds[4]),
+            .I (nt_leds[7]));
+	// ../source/Lab3_Led_Key.v:3
+
+(* PAP_IO_DIRECTION="OUTPUT", PAP_IO_LOC="D8", PAP_IO_VCCIO="3.3", PAP_IO_STANDARD="LVCMOS33", PAP_IO_DRIVE="4", PAP_IO_NONE="TRUE", PAP_IO_SLEW="SLOW" *)    GTP_OUTBUF /* \leds_obuf[5]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        \leds_obuf[5]  (
+            .O (leds[5]),
+            .I (nt_leds[5]));
+	// ../source/Lab3_Led_Key.v:3
+
+(* PAP_IO_DIRECTION="OUTPUT", PAP_IO_LOC="C8", PAP_IO_VCCIO="3.3", PAP_IO_STANDARD="LVCMOS33", PAP_IO_DRIVE="4", PAP_IO_NONE="TRUE", PAP_IO_SLEW="SLOW" *)    GTP_OUTBUF /* \leds_obuf[6]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        \leds_obuf[6]  (
+            .O (leds[6]),
+            .I (nt_leds[6]));
+	// ../source/Lab3_Led_Key.v:3
+
+(* PAP_IO_DIRECTION="OUTPUT", PAP_IO_LOC="A8", PAP_IO_VCCIO="3.3", PAP_IO_STANDARD="LVCMOS33", PAP_IO_DRIVE="4", PAP_IO_NONE="TRUE", PAP_IO_SLEW="SLOW" *)    GTP_OUTBUF /* \leds_obuf[7]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        \leds_obuf[7]  (
+            .O (leds[7]),
+            .I (nt_leds[7]));
+	// ../source/Lab3_Led_Key.v:3
+
+    GTP_LUT4 /* \leds_sum0[6:4]  */ #(
+            .INIT(16'b0110100110010110))
+        \leds_sum0[6:4]  (
+            .Z (nt_leds[7]),
+            .I0 (nt_keys[0]),
+            .I1 (nt_keys[1]),
+            .I2 (nt_keys[2]),
+            .I3 (nt_keys[3]));
+	// LUT = (I0&~I1&~I2&~I3)|(~I0&I1&~I2&~I3)|(~I0&~I1&I2&~I3)|(I0&I1&I2&~I3)|(~I0&~I1&~I2&I3)|(I0&I1&~I2&I3)|(I0&~I1&I2&I3)|(~I0&I1&I2&I3) ;
+
+    GTP_LUT4 /* \leds_sum1[6:4]  */ #(
+            .INIT(16'b0111111011101000))
+        \leds_sum1[6:4]  (
+            .Z (nt_leds[5]),
+            .I0 (nt_keys[0]),
+            .I1 (nt_keys[1]),
+            .I2 (nt_keys[2]),
+            .I3 (nt_keys[3]));
+	// LUT = (I0&I1&~I3)|(I0&~I2&I3)|(I1&~I2&I3)|(I0&~I1&I2)|(~I0&I1&I2)|(~I0&I2&I3) ;
+
+
+endmodule
+

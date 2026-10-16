@@ -1,0 +1,109 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "14.0 (devel)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\PROGRA~1\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\PROGRA~1\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\PROGRA~1\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\PROGRA~1\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\PROGRA~1\iverilog\lib\ivl\va_math.vpi";
+:vpi_module "C:\PROGRA~1\iverilog\lib\ivl\v2009.vpi";
+S_000001DF293BF0A0 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_000001DF293BF400 .scope module, "tb_Lab3_Led_Key" "tb_Lab3_Led_Key" 3 2;
+ .timescale -9 -12;
+v000001DF293CDFB0_0 .var "keys", 3 0;
+v000001DF293CE0F0_0 .net "leds", 7 0, L_000001DF293CE230;  1 drivers
+S_000001DF293954D0 .scope module, "uut" "Lab3_Led_Key" 3 7, 4 1 0, S_000001DF293BF400;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 4 "keys";
+    .port_info 1 /OUTPUT 8 "leds";
+L_000001DF293D36F0 .functor NOT 2, L_000001DF293CEB90, C4<00>, C4<00>, C4<00>;
+L_000001DF293D3610 .functor BUFZ 3, v000001DF293CE550_0, C4<000>, C4<000>, C4<000>;
+L_000001DF296C0088 .functor BUFT 1, C4<001>, C4<0>, C4<0>, C4<0>;
+L_000001DF293D3680 .functor AND 3, v000001DF293CE550_0, L_000001DF296C0088, C4<111>, C4<111>;
+v000001DF293BF590_0 .net *"_ivl_13", 2 0, L_000001DF293D3610;  1 drivers
+v000001DF293D2870_0 .net/2u *"_ivl_17", 2 0, L_000001DF296C0088;  1 drivers
+v000001DF293BB9E0_0 .net *"_ivl_19", 2 0, L_000001DF293D3680;  1 drivers
+v000001DF293CE7D0_0 .net *"_ivl_22", 0 0, L_000001DF293CECD0;  1 drivers
+v000001DF293CE050_0 .net *"_ivl_3", 1 0, L_000001DF293CEB90;  1 drivers
+v000001DF293CE690_0 .net *"_ivl_4", 1 0, L_000001DF293D36F0;  1 drivers
+v000001DF293CDF10_0 .net *"_ivl_9", 1 0, L_000001DF293CE870;  1 drivers
+v000001DF293CEC30_0 .net "keys", 3 0, v000001DF293CDFB0_0;  1 drivers
+v000001DF293CE190_0 .net "leds", 7 0, L_000001DF293CE230;  alias, 1 drivers
+v000001DF293CE550_0 .var "nums", 2 0;
+E_000001DF293BD290 .event anyedge, v000001DF293CEC30_0;
+L_000001DF293CEB90 .part v000001DF293CDFB0_0, 0, 2;
+L_000001DF293CE870 .part v000001DF293CDFB0_0, 2, 2;
+L_000001DF293CE230 .concat8 [ 2 2 3 1], L_000001DF293D36F0, L_000001DF293CE870, L_000001DF293D3610, L_000001DF293CECD0;
+L_000001DF293CECD0 .part L_000001DF293D3680, 0, 1;
+    .scope S_000001DF293954D0;
+T_0 ;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v000001DF293CE550_0, 0, 3;
+    %end;
+    .thread T_0, $init;
+    .scope S_000001DF293954D0;
+T_1 ;
+    %wait E_000001DF293BD290;
+    %load/vec4 v000001DF293CEC30_0;
+    %parti/s 1, 0, 2;
+    %pad/u 3;
+    %load/vec4 v000001DF293CEC30_0;
+    %parti/s 1, 1, 2;
+    %pad/u 3;
+    %add;
+    %load/vec4 v000001DF293CEC30_0;
+    %parti/s 1, 2, 3;
+    %pad/u 3;
+    %add;
+    %load/vec4 v000001DF293CEC30_0;
+    %parti/s 1, 3, 3;
+    %pad/u 3;
+    %add;
+    %store/vec4 v000001DF293CE550_0, 0, 3;
+    %jmp T_1;
+    .thread T_1, $push;
+    .scope S_000001DF293BF400;
+T_2 ;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v000001DF293CDFB0_0, 0, 4;
+    %delay 100000, 0;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v000001DF293CDFB0_0, 0, 4;
+    %delay 100000, 0;
+    %pushi/vec4 2, 0, 4;
+    %store/vec4 v000001DF293CDFB0_0, 0, 4;
+    %delay 100000, 0;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v000001DF293CDFB0_0, 0, 4;
+    %delay 100000, 0;
+    %pushi/vec4 4, 0, 4;
+    %store/vec4 v000001DF293CDFB0_0, 0, 4;
+    %delay 100000, 0;
+    %pushi/vec4 5, 0, 4;
+    %store/vec4 v000001DF293CDFB0_0, 0, 4;
+    %delay 100000, 0;
+    %pushi/vec4 6, 0, 4;
+    %store/vec4 v000001DF293CDFB0_0, 0, 4;
+    %delay 100000, 0;
+    %pushi/vec4 7, 0, 4;
+    %store/vec4 v000001DF293CDFB0_0, 0, 4;
+    %delay 100000, 0;
+    %vpi_call/w 3 26 "$finish" {0 0 0};
+    %end;
+    .thread T_2;
+    .scope S_000001DF293BF400;
+T_3 ;
+    %vpi_call/w 3 30 "$dumpfile", "testbench.vcd" {0 0 0};
+    %vpi_call/w 3 31 "$dumpvars" {0 0 0};
+    %vpi_call/w 3 32 "$display", "save to testbench.vcd" {0 0 0};
+    %end;
+    .thread T_3;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "c:/Users/Admin/Workspace/DIC-demo/lab3/source/tb_Lab3_Led_Key.v";
+    "c:/Users/Admin/Workspace/DIC-demo/lab3/source/Lab3_Led_Key.v";

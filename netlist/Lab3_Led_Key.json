@@ -1,0 +1,187 @@
+{
+  "creator": "Yosys 0.48 (git sha1 aaa5347494801e9e3870b31387da59da24233f76, clang++ 18.1.2-wasi-sdk -O3)",
+  "modules": {
+    "Lab3_Led_Key": {
+      "attributes": {
+        "cells_not_processed": "00000000000000000000000000000001",
+        "src": "{workspace}/lab3/source/Lab3_Led_Key.v:1.1-18.10"
+      },
+      "ports": {
+        "keys": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "leds": {
+          "direction": "output",
+          "bits": [ 6, 7, 4, 5, 8, 9, 10, 8 ]
+        }
+      },
+      "cells": {
+        "$add${workspace}/lab3/source/Lab3_Led_Key.v:15$4": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "{workspace}/lab3/source/Lab3_Led_Key.v:15.10-15.27"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 3 ],
+            "Y": [ 11, 12, 13 ]
+          }
+        },
+        "$add${workspace}/lab3/source/Lab3_Led_Key.v:15$5": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "{workspace}/lab3/source/Lab3_Led_Key.v:15.10-15.37"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 11, 12, 13 ],
+            "B": [ 4 ],
+            "Y": [ 14, 15, 16 ]
+          }
+        },
+        "$add${workspace}/lab3/source/Lab3_Led_Key.v:15$6": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "{workspace}/lab3/source/Lab3_Led_Key.v:15.10-15.47"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14, 15, 16 ],
+            "B": [ 5 ],
+            "Y": [ 8, 9, 10 ]
+          }
+        },
+        "$not${workspace}/lab3/source/Lab3_Led_Key.v:6$1": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "src": "{workspace}/lab3/source/Lab3_Led_Key.v:6.20-6.30"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3 ],
+            "Y": [ 6, 7 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\nums[2:0]": {
+          "hide_name": 1,
+          "bits": [ 8, 9, 10 ],
+          "attributes": {
+            "src": "{workspace}/lab3/source/Lab3_Led_Key.v:14.1-16.4"
+          }
+        },
+        "$1\\nums[2:0]": {
+          "hide_name": 1,
+          "bits": [ "0", "0", "0" ],
+          "attributes": {
+            "src": "{workspace}/lab3/source/Lab3_Led_Key.v:9.11-9.24"
+          }
+        },
+        "$add${workspace}/lab3/source/Lab3_Led_Key.v:15$4_Y": {
+          "hide_name": 1,
+          "bits": [ 11, 12, 13 ],
+          "attributes": {
+            "src": "{workspace}/lab3/source/Lab3_Led_Key.v:15.10-15.27"
+          }
+        },
+        "$add${workspace}/lab3/source/Lab3_Led_Key.v:15$5_Y": {
+          "hide_name": 1,
+          "bits": [ 14, 15, 16 ],
+          "attributes": {
+            "src": "{workspace}/lab3/source/Lab3_Led_Key.v:15.10-15.37"
+          }
+        },
+        "$add${workspace}/lab3/source/Lab3_Led_Key.v:15$6_Y": {
+          "hide_name": 1,
+          "bits": [ 8, 9, 10 ],
+          "attributes": {
+            "src": "{workspace}/lab3/source/Lab3_Led_Key.v:15.10-15.47"
+          }
+        },
+        "$and${workspace}/lab3/source/Lab3_Led_Key.v:12$2_Y": {
+          "hide_name": 1,
+          "bits": [ 8, "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+          "attributes": {
+            "src": "{workspace}/lab3/source/Lab3_Led_Key.v:12.18-12.26"
+          }
+        },
+        "$not${workspace}/lab3/source/Lab3_Led_Key.v:6$1_Y": {
+          "hide_name": 1,
+          "bits": [ 6, 7 ],
+          "attributes": {
+            "src": "{workspace}/lab3/source/Lab3_Led_Key.v:6.20-6.30"
+          }
+        },
+        "keys": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "src": "{workspace}/lab3/source/Lab3_Led_Key.v:2.15-2.19"
+          }
+        },
+        "leds": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 4, 5, 8, 9, 10, 8 ],
+          "attributes": {
+            "src": "{workspace}/lab3/source/Lab3_Led_Key.v:3.16-3.20"
+          }
+        },
+        "nums": {
+          "hide_name": 0,
+          "bits": [ 8, 9, 10 ],
+          "attributes": {
+            "src": "{workspace}/lab3/source/Lab3_Led_Key.v:9.11-9.15"
+          }
+        }
+      }
+    }
+  }
+}
