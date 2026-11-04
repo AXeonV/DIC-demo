@@ -1,0 +1,1 @@
+.rtl_screen -top_module {Lab3_Seg_Key} -include_path {<C:/Users/Admin/Workspace/DIC-demo/PDS_Lab3_Seg_Key>} -design_files {<C:/Users/Admin/Workspace/DIC-demo/PDS_Lab3_Seg_Key/source/Lab3_Seg_Key.v|work>}

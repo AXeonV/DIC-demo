@@ -1,0 +1,187 @@
+[Info] [2026-11-1 17:54:34] /***************************Start Configuration***************************/
+[Info] [2026-11-1 17:54:34] Path: C:/Program Files/Pango/PDS_2022.2-SP6.4/bin
+[Info] [2026-11-1 17:54:34] Version: 146967
+[Info] [2026-11-1 17:54:35] Current Path: C:/Users/Admin/Workspace/DIC-demo/PDS_Lab3_Seg_Key
+[Info] [2026-11-1 17:54:35] PDS Dir Path: C:/Users/Admin/Workspace/DIC-demo/PDS_Lab3_Seg_Key
+[Debug] [2026-11-1 17:54:38] begin to add pango device by bitstream file.
+[Info] [2026-11-1 17:54:39] set OpenLastPath: C:/Users/Admin/Workspace/DIC-demo/PDS_Lab3_Seg_Key/generate_bitstream/Lab3_Seg_Key.sbit
+[Debug] [2026-11-1 17:54:39] begin to get device info from CFG file...
+[Debug] [2026-11-1 17:54:39] end to get device info from CFG file...
+[Info] [2026-11-1 17:54:39] Loading file done : C:/Users/Admin/Workspace/DIC-demo/PDS_Lab3_Seg_Key/generate_bitstream/Lab3_Seg_Key.sbit
+[Info] [2026-11-1 17:54:39] Added device successfully : Logos-PGL22G
+[Debug] [2026-11-1 17:54:39] Begin to update graphic item and tree item ...
+[Debug] [2026-11-1 17:54:39] End to update graphic item and tree item ...
+[Debug] [2026-11-1 17:54:39] end to add pango device by bitstream file.
+[Debug] [2026-11-1 17:54:39] Log::Print : Loading file 'C:/Users/Admin/Workspace/DIC-demo/PDS_Lab3_Seg_Key/generate_bitstream/Lab3_Seg_Key.sbit' done!
+[Debug] [2026-11-1 17:54:39] Log::Print : Added Device Logos-PGL22G successfully!
+[Info] [2026-11-1 17:55:02] Configuration is not connect with server. connect first then scan chain.
+[Debug] [2026-11-1 17:55:02] Client Local host name:AXeonV-Laptop
+[Debug] [2026-11-1 17:55:02] Client Local Address:10.26.251.99
+[Debug] [2026-11-1 17:55:02] Client Local Address:172.21.16.1
+[Debug] [2026-11-1 17:55:02] Server Address:127.0.0.1, Port:65420
+[Debug] [2026-11-1 17:55:02] Log::Print : Connecting to server[127.0.0.1 : 65420].
+[Info] [2026-11-1 17:55:03] Connect OK, Server: 127.0.0.1  Port: 65420
+[Debug] [2026-11-1 17:55:03] Finish.
+[Info] [2026-11-1 17:55:03] Connect server succeeded
+[Debug] [2026-11-1 17:55:03] Send RPC:1
+[Debug] [2026-11-1 17:55:03] Send cmd [check version information:40004] OK
+[Debug] [2026-11-1 17:55:03] Log::Print : Connect to server[127.0.0.1 : 65420] successfully.
+[Debug] [2026-11-1 17:55:03] Send RPC:2
+[Debug] [2026-11-1 17:55:03] Send cmd [get_cable_paras:40010] OK
+[Debug] [2026-11-1 17:55:03] Begin to send initialize chain cmd...
+[Debug] [2026-11-1 17:55:03] Begin to send cmd of scanning flash device on board
+[Debug] [2026-11-1 17:55:03] Send RPC:3
+[Debug] [2026-11-1 17:55:03] Send cmd [Scan SPI Device On Board:20100] OK
+[Debug] [2026-11-1 17:55:03] End to send cmd of scanning flash device on board
+[Debug] [2026-11-1 17:55:03] End to send initialize chain cmd.
+[Debug] [2026-11-1 17:55:03] COMMAND[check version information] execute successfully, takes 0.1 secs.
+[Debug] [2026-11-1 17:55:03] Log::Print : COMMAND[check version information] execute successfully, takes 0.1 secs.
+[Debug] [2026-11-1 17:55:04] COMMAND[get_cable_paras] execute successfully, takes 0.9 secs.
+[Debug] [2026-11-1 17:55:04] Log::Print : The cable List : 
+Cable index 0:USB Cable II/fffffffffffffffe 
+
+[Debug] [2026-11-1 17:55:04] Log::Print : COMMAND[get_cable_paras] execute successfully, takes 0.9 secs.
+[Debug] [2026-11-1 17:55:06] Begin to send programming cmd...
+[Debug] [2026-11-1 17:55:06] Send RPC:4
+[Debug] [2026-11-1 17:55:06] Begin to send program data.
+[Debug] [2026-11-1 17:55:06] End to send program data.
+[Debug] [2026-11-1 17:55:06] Send cmd [Program:20002] OK
+[Debug] [2026-11-1 17:55:08] begin to scan flash device.
+[Error] [2026-11-1 17:55:08] fail to exec Scan SPI Device On Board cmd...
+[Debug] [2026-11-1 17:55:08] End to send programming cmd.
+[Debug] [2026-11-1 17:55:08] Log::Print : PANGO USB CABLE II cable driver: D2XX DLL
+[Error] [2026-11-1 17:55:08] MsgOut: JtagServer-0336: Flash id is 0xffffff, maybe the clock frequency is high or this flash is not supported, please reduce the clock frequency of cable or replace with other flash.
+[Error] [2026-11-1 17:55:08] MsgOut: Configuration-0008: The command 'Scan SPI Device On Board' execute fail.
+[Debug] [2026-11-1 17:55:09] The value of Progress is 6
+[Debug] [2026-11-1 17:55:09] The value of Progress is 10
+[Debug] [2026-11-1 17:55:09] The value of Progress is 15
+[Debug] [2026-11-1 17:55:09] The value of Progress is 20
+[Debug] [2026-11-1 17:55:09] The value of Progress is 25
+[Debug] [2026-11-1 17:55:09] The value of Progress is 30
+[Debug] [2026-11-1 17:55:09] The value of Progress is 35
+[Debug] [2026-11-1 17:55:09] The value of Progress is 40
+[Debug] [2026-11-1 17:55:09] The value of Progress is 45
+[Debug] [2026-11-1 17:55:09] The value of Progress is 50
+[Debug] [2026-11-1 17:55:09] The value of Progress is 55
+[Debug] [2026-11-1 17:55:09] The value of Progress is 60
+[Debug] [2026-11-1 17:55:09] The value of Progress is 65
+[Debug] [2026-11-1 17:55:09] The value of Progress is 70
+[Debug] [2026-11-1 17:55:09] The value of Progress is 75
+[Debug] [2026-11-1 17:55:09] The value of Progress is 80
+[Debug] [2026-11-1 17:55:09] The value of Progress is 85
+[Debug] [2026-11-1 17:55:09] The value of Progress is 90
+[Debug] [2026-11-1 17:55:09] The value of Progress is 95
+[Debug] [2026-11-1 17:55:09] The value of Progress is 100
+[Debug] [2026-11-1 17:55:09] COMMAND[Program] execute successfully, takes 3.0 secs.
+[Debug] [2026-11-1 17:55:09] Log::Print : The done bit is 1
+[Debug] [2026-11-1 17:55:09] Log::Print : COMMAND[Program] execute successfully, takes 3.0 secs.
+[Info] [2026-11-1 17:55:43] /***************************End Configration***************************/
+[Info] [2026-11-1 19:34:48] /***************************Start Configuration***************************/
+[Info] [2026-11-1 19:34:48] Path: C:/Program Files/Pango/PDS_2022.2-SP6.4/bin
+[Info] [2026-11-1 19:34:48] Version: 146967
+[Info] [2026-11-1 19:34:49] Current Path: C:/Users/Admin/Workspace/DIC-demo/PDS_Lab3_Seg_Key
+[Info] [2026-11-1 19:34:49] PDS Dir Path: C:/Users/Admin/Workspace/DIC-demo/PDS_Lab3_Seg_Key
+[Debug] [2026-11-1 19:34:52] begin to add pango device by bitstream file.
+[Info] [2026-11-1 19:34:53] set OpenLastPath: C:/Users/Admin/Workspace/DIC-demo/PDS_Lab3_Seg_Key/generate_bitstream/Lab3_Seg_Key.sbit
+[Debug] [2026-11-1 19:34:53] begin to get device info from CFG file...
+[Debug] [2026-11-1 19:34:53] end to get device info from CFG file...
+[Info] [2026-11-1 19:34:53] Loading file done : C:/Users/Admin/Workspace/DIC-demo/PDS_Lab3_Seg_Key/generate_bitstream/Lab3_Seg_Key.sbit
+[Info] [2026-11-1 19:34:53] Added device successfully : Logos-PGL22G
+[Debug] [2026-11-1 19:34:53] Begin to update graphic item and tree item ...
+[Debug] [2026-11-1 19:34:53] End to update graphic item and tree item ...
+[Debug] [2026-11-1 19:34:53] end to add pango device by bitstream file.
+[Debug] [2026-11-1 19:34:53] Log::Print : Loading file 'C:/Users/Admin/Workspace/DIC-demo/PDS_Lab3_Seg_Key/generate_bitstream/Lab3_Seg_Key.sbit' done!
+[Debug] [2026-11-1 19:34:53] Log::Print : Added Device Logos-PGL22G successfully!
+[Debug] [2026-11-1 19:35:00] begin to add pango device by bitstream file.
+[Debug] [2026-11-1 19:35:01] bin file name is empty and end add pango device.
+[Info] [2026-11-1 19:35:05] Configuration is not connect with server. connect first then scan chain.
+[Debug] [2026-11-1 19:35:05] Client Local host name:AXeonV-Laptop
+[Debug] [2026-11-1 19:35:05] Client Local Address:10.26.251.99
+[Debug] [2026-11-1 19:35:05] Client Local Address:172.21.16.1
+[Debug] [2026-11-1 19:35:05] Server Address:127.0.0.1, Port:65420
+[Debug] [2026-11-1 19:35:05] Log::Print : Connecting to server[127.0.0.1 : 65420].
+[Info] [2026-11-1 19:35:06] Connect OK, Server: 127.0.0.1  Port: 65420
+[Debug] [2026-11-1 19:35:06] Finish.
+[Info] [2026-11-1 19:35:06] Connect server succeeded
+[Debug] [2026-11-1 19:35:06] Send RPC:1
+[Debug] [2026-11-1 19:35:06] Send cmd [check version information:40004] OK
+[Debug] [2026-11-1 19:35:06] Log::Print : Connect to server[127.0.0.1 : 65420] successfully.
+[Debug] [2026-11-1 19:35:06] Send RPC:2
+[Debug] [2026-11-1 19:35:06] Send cmd [get_cable_paras:40010] OK
+[Debug] [2026-11-1 19:35:06] Begin to send initialize chain cmd...
+[Debug] [2026-11-1 19:35:06] Begin to send cmd of scanning flash device on board
+[Debug] [2026-11-1 19:35:06] Send RPC:3
+[Debug] [2026-11-1 19:35:06] Send cmd [Scan SPI Device On Board:20100] OK
+[Debug] [2026-11-1 19:35:06] End to send cmd of scanning flash device on board
+[Debug] [2026-11-1 19:35:06] End to send initialize chain cmd.
+[Debug] [2026-11-1 19:35:06] COMMAND[check version information] execute successfully, takes 0.1 secs.
+[Debug] [2026-11-1 19:35:06] Log::Print : COMMAND[check version information] execute successfully, takes 0.1 secs.
+[Debug] [2026-11-1 19:35:07] COMMAND[get_cable_paras] execute successfully, takes 0.9 secs.
+[Debug] [2026-11-1 19:35:07] Log::Print : The cable List : 
+Cable index 0:USB Cable II/fffffffffffffffe 
+
+[Debug] [2026-11-1 19:35:07] Log::Print : COMMAND[get_cable_paras] execute successfully, takes 0.9 secs.
+[Debug] [2026-11-1 19:35:10] Begin to send programming cmd...
+[Debug] [2026-11-1 19:35:10] Send RPC:4
+[Debug] [2026-11-1 19:35:10] Begin to send program data.
+[Debug] [2026-11-1 19:35:10] End to send program data.
+[Debug] [2026-11-1 19:35:10] Send cmd [Program:20002] OK
+[Debug] [2026-11-1 19:35:11] begin to scan flash device.
+[Error] [2026-11-1 19:35:11] fail to exec Scan SPI Device On Board cmd...
+[Debug] [2026-11-1 19:35:11] End to send programming cmd.
+[Debug] [2026-11-1 19:35:11] Log::Print : PANGO USB CABLE II cable driver: D2XX DLL
+[Error] [2026-11-1 19:35:11] MsgOut: JtagServer-0336: Flash id is 0xffffff, maybe the clock frequency is high or this flash is not supported, please reduce the clock frequency of cable or replace with other flash.
+[Error] [2026-11-1 19:35:11] MsgOut: Configuration-0008: The command 'Scan SPI Device On Board' execute fail.
+[Debug] [2026-11-1 19:35:12] The value of Progress is 6
+[Debug] [2026-11-1 19:35:12] The value of Progress is 10
+[Debug] [2026-11-1 19:35:12] The value of Progress is 15
+[Debug] [2026-11-1 19:35:12] The value of Progress is 20
+[Debug] [2026-11-1 19:35:12] The value of Progress is 25
+[Debug] [2026-11-1 19:35:12] The value of Progress is 30
+[Debug] [2026-11-1 19:35:12] The value of Progress is 35
+[Debug] [2026-11-1 19:35:12] The value of Progress is 40
+[Debug] [2026-11-1 19:35:12] The value of Progress is 45
+[Debug] [2026-11-1 19:35:12] The value of Progress is 50
+[Debug] [2026-11-1 19:35:12] The value of Progress is 55
+[Debug] [2026-11-1 19:35:12] The value of Progress is 60
+[Debug] [2026-11-1 19:35:12] The value of Progress is 65
+[Debug] [2026-11-1 19:35:12] The value of Progress is 70
+[Debug] [2026-11-1 19:35:12] The value of Progress is 75
+[Debug] [2026-11-1 19:35:12] The value of Progress is 80
+[Debug] [2026-11-1 19:35:12] The value of Progress is 85
+[Debug] [2026-11-1 19:35:12] The value of Progress is 90
+[Debug] [2026-11-1 19:35:12] The value of Progress is 95
+[Debug] [2026-11-1 19:35:12] The value of Progress is 100
+[Debug] [2026-11-1 19:35:13] COMMAND[Program] execute successfully, takes 2.3 secs.
+[Debug] [2026-11-1 19:35:13] Log::Print : The done bit is 1
+[Debug] [2026-11-1 19:35:13] Log::Print : COMMAND[Program] execute successfully, takes 2.3 secs.
+[Debug] [2026-11-1 19:38:05] Begin to send programming cmd...
+[Debug] [2026-11-1 19:38:05] Send RPC:5
+[Debug] [2026-11-1 19:38:05] Begin to send program data.
+[Debug] [2026-11-1 19:38:05] End to send program data.
+[Debug] [2026-11-1 19:38:05] Send cmd [Program:20002] OK
+[Debug] [2026-11-1 19:38:06] The value of Progress is 6
+[Debug] [2026-11-1 19:38:06] The value of Progress is 10
+[Debug] [2026-11-1 19:38:06] The value of Progress is 15
+[Debug] [2026-11-1 19:38:06] The value of Progress is 20
+[Debug] [2026-11-1 19:38:06] The value of Progress is 25
+[Debug] [2026-11-1 19:38:06] The value of Progress is 30
+[Debug] [2026-11-1 19:38:06] The value of Progress is 35
+[Debug] [2026-11-1 19:38:06] The value of Progress is 40
+[Debug] [2026-11-1 19:38:06] The value of Progress is 45
+[Debug] [2026-11-1 19:38:06] The value of Progress is 50
+[Debug] [2026-11-1 19:38:06] The value of Progress is 55
+[Debug] [2026-11-1 19:38:06] The value of Progress is 60
+[Debug] [2026-11-1 19:38:06] The value of Progress is 65
+[Debug] [2026-11-1 19:38:06] The value of Progress is 70
+[Debug] [2026-11-1 19:38:06] The value of Progress is 75
+[Debug] [2026-11-1 19:38:06] The value of Progress is 80
+[Debug] [2026-11-1 19:38:06] The value of Progress is 85
+[Debug] [2026-11-1 19:38:06] The value of Progress is 90
+[Debug] [2026-11-1 19:38:06] The value of Progress is 95
+[Debug] [2026-11-1 19:38:06] The value of Progress is 100
+[Debug] [2026-11-1 19:38:06] COMMAND[Program] execute successfully, takes 1.0 secs.
+[Debug] [2026-11-1 19:38:06] End to send programming cmd.
+[Debug] [2026-11-1 19:38:06] Log::Print : The done bit is 1
+[Debug] [2026-11-1 19:38:06] Log::Print : COMMAND[Program] execute successfully, takes 1.0 secs.
+[Info] [2026-11-1 19:41:59] /***************************End Configration***************************/

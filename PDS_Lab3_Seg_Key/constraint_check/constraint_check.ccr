@@ -1,0 +1,45 @@
+##### Written on 2026/11/01 19:33:37 ###############################
+
+
+##### INFO ##################################################
+
+Current device : 
+	PGL22G-6MBG324
+
+Top Module : 
+	Lab3_Seg_Key
+
+Constraint File(s) : 
+	C:/Users/Admin/Workspace/DIC-demo/PDS_Lab3_Seg_Key/source/Lab3_Seg_Key.fdc
+
+##### SUMMARY ######################################################
+
+Found 0 error(s), 2 critical warning(s), 0 warning(s), out of 124 constraint(s)
+
+
+Inapplicable constraints(except overwritten constraints):
+********************************************
+
+define_attribute {p:seg_data[1]} {PAP_IO_LOC} {H13}
+	C: ConstraintEditor-2002: [C:/Users/Admin/Workspace/DIC-demo/PDS_Lab3_Seg_Key/source/Lab3_Seg_Key.fdc(line number: 44)] | Port seg_data[1] has been placed at location H13, whose type is share pin.
+
+define_attribute {p:seg_data[6]} {PAP_IO_LOC} {H14}
+	C: ConstraintEditor-2002: [C:/Users/Admin/Workspace/DIC-demo/PDS_Lab3_Seg_Key/source/Lab3_Seg_Key.fdc(line number: 84)] | Port seg_data[6] has been placed at location H14, whose type is share pin.
+
+
+Constraints with issues:
+********************************************
+
+
+Issues without commands:
+********************************************
+
+
+Unconstrained ports:
+********************************************
+
+
+Constraints with matching wildcard expressions:
+********************************************
+
+

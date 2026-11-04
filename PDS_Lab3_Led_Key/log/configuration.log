@@ -1,0 +1,149 @@
+[Info] [2026-11-1 16:46:50] /***************************Start Configuration***************************/
+[Info] [2026-11-1 16:46:50] Path: C:/Program Files/Pango/PDS_2022.2-SP6.4/bin
+[Info] [2026-11-1 16:46:50] Version: 146967
+[Info] [2026-11-1 16:46:51] Current Path: C:/Users/Admin/Workspace/DIC-demo/PDS_Lab3_Led_Key
+[Info] [2026-11-1 16:46:51] PDS Dir Path: C:/Users/Admin/Workspace/DIC-demo/PDS_Lab3_Led_Key
+[Debug] [2026-11-1 16:47:03] begin to add pango device by bitstream file.
+[Info] [2026-11-1 16:47:08] set OpenLastPath: C:/Users/Admin/Workspace/DIC-demo/PDS_Lab3_Led_Key/generate_bitstream/Lab3_Led_Key.sbit
+[Debug] [2026-11-1 16:47:08] begin to get device info from CFG file...
+[Debug] [2026-11-1 16:47:08] end to get device info from CFG file...
+[Info] [2026-11-1 16:47:08] Loading file done : C:/Users/Admin/Workspace/DIC-demo/PDS_Lab3_Led_Key/generate_bitstream/Lab3_Led_Key.sbit
+[Info] [2026-11-1 16:47:08] Added device successfully : Logos-PGL22G
+[Debug] [2026-11-1 16:47:08] Begin to update graphic item and tree item ...
+[Debug] [2026-11-1 16:47:08] End to update graphic item and tree item ...
+[Debug] [2026-11-1 16:47:08] end to add pango device by bitstream file.
+[Debug] [2026-11-1 16:47:08] Log::Print : Loading file 'C:/Users/Admin/Workspace/DIC-demo/PDS_Lab3_Led_Key/generate_bitstream/Lab3_Led_Key.sbit' done!
+[Debug] [2026-11-1 16:47:08] Log::Print : Added Device Logos-PGL22G successfully!
+[Info] [2026-11-1 16:47:22] Configuration is not connect with server. connect first then scan chain.
+[Debug] [2026-11-1 16:47:22] Client Local host name:AXeonV-Laptop
+[Debug] [2026-11-1 16:47:22] Client Local Address:10.26.251.99
+[Debug] [2026-11-1 16:47:22] Client Local Address:172.21.16.1
+[Debug] [2026-11-1 16:47:22] Server Address:127.0.0.1, Port:65420
+[Debug] [2026-11-1 16:47:22] Log::Print : Connecting to server[127.0.0.1 : 65420].
+[Info] [2026-11-1 16:47:23] Connect OK, Server: 127.0.0.1  Port: 65420
+[Debug] [2026-11-1 16:47:23] Finish.
+[Info] [2026-11-1 16:47:23] Connect server succeeded
+[Debug] [2026-11-1 16:47:23] Send RPC:1
+[Debug] [2026-11-1 16:47:23] Send cmd [check version information:40004] OK
+[Debug] [2026-11-1 16:47:23] Log::Print : Connect to server[127.0.0.1 : 65420] successfully.
+[Debug] [2026-11-1 16:47:23] Send RPC:2
+[Debug] [2026-11-1 16:47:23] Send cmd [get_cable_paras:40010] OK
+[Debug] [2026-11-1 16:47:23] Begin to send initialize chain cmd...
+[Debug] [2026-11-1 16:47:23] Send RPC:3
+[Debug] [2026-11-1 16:47:23] Send cmd [Open config cable:20001] OK
+[Debug] [2026-11-1 16:47:23] End to send initialize chain cmd.
+[Debug] [2026-11-1 16:47:23] COMMAND[check version information] execute successfully, takes 0.0 secs.
+[Debug] [2026-11-1 16:47:23] Log::Print : COMMAND[check version information] execute successfully, takes 0.0 secs.
+[Debug] [2026-11-1 16:47:24] COMMAND[get_cable_paras] execute successfully, takes 0.9 secs.
+[Debug] [2026-11-1 16:47:24] Log::Print : The cable List : 
+Cable index 0:USB Cable II/fffffffffffffffe 
+
+[Debug] [2026-11-1 16:47:24] Log::Print : COMMAND[get_cable_paras] execute successfully, takes 0.9 secs.
+[Debug] [2026-11-1 16:47:24] begin the exec of open cable cmd...
+[Debug] [2026-11-1 16:47:24] Begin to deal with chain from server...
+[Debug] [2026-11-1 16:47:24] Begin to set user chain...
+[Debug] [2026-11-1 16:47:24] End to set user chain.
+[Debug] [2026-11-1 16:47:24] Begin to update graphic item and tree item ...
+[Debug] [2026-11-1 16:47:24] End to update graphic item and tree item ...
+[Debug] [2026-11-1 16:47:24] Log::Print : PANGO USB CABLE II cable driver: D2XX DLL
+[Debug] [2026-11-1 16:47:24] Log::Print : PGL22G
+[Debug] [2026-11-1 16:47:24] Log::Print : This device configure situation (done bit): 1
+[Info] [2026-11-1 16:47:26] set OpenLastPath: C:/Users/Admin/Workspace/DIC-demo/PDS_Lab3_Led_Key/generate_bitstream/Lab3_Led_Key.sbit
+[Debug] [2026-11-1 16:47:26] begin to get device info from CFG file...
+[Debug] [2026-11-1 16:47:26] end to get device info from CFG file...
+[Debug] [2026-11-1 16:47:26] Begin to update graphic item and tree item ...
+[Debug] [2026-11-1 16:47:26] End to update graphic item and tree item ...
+[Debug] [2026-11-1 16:47:26] Begin to update graphic item and tree item ...
+[Debug] [2026-11-1 16:47:26] End to update graphic item and tree item ...
+[Debug] [2026-11-1 16:47:26] End to deal wiht chain from server.
+[Debug] [2026-11-1 16:47:26] end the exec of open cable cmd.
+[Debug] [2026-11-1 16:47:26] COMMAND[Open config cable] execute successfully, takes 2.8 secs.
+[Debug] [2026-11-1 16:47:26] Log::Print : COMMAND[Open config cable] execute successfully, takes 2.8 secs.
+[Debug] [2026-11-1 16:48:04] Begin to send programming cmd...
+[Debug] [2026-11-1 16:48:04] Send RPC:4
+[Debug] [2026-11-1 16:48:04] Begin to send program data.
+[Debug] [2026-11-1 16:48:04] End to send program data.
+[Debug] [2026-11-1 16:48:04] Send cmd [Program:20002] OK
+[Debug] [2026-11-1 16:48:04] The value of Progress is 6
+[Debug] [2026-11-1 16:48:04] The value of Progress is 10
+[Debug] [2026-11-1 16:48:04] The value of Progress is 15
+[Debug] [2026-11-1 16:48:04] The value of Progress is 20
+[Debug] [2026-11-1 16:48:04] The value of Progress is 25
+[Debug] [2026-11-1 16:48:04] The value of Progress is 30
+[Debug] [2026-11-1 16:48:04] The value of Progress is 35
+[Debug] [2026-11-1 16:48:04] The value of Progress is 40
+[Debug] [2026-11-1 16:48:04] The value of Progress is 45
+[Debug] [2026-11-1 16:48:04] The value of Progress is 50
+[Debug] [2026-11-1 16:48:04] The value of Progress is 55
+[Debug] [2026-11-1 16:48:04] The value of Progress is 60
+[Debug] [2026-11-1 16:48:04] The value of Progress is 65
+[Debug] [2026-11-1 16:48:05] The value of Progress is 70
+[Debug] [2026-11-1 16:48:05] The value of Progress is 75
+[Debug] [2026-11-1 16:48:05] The value of Progress is 80
+[Debug] [2026-11-1 16:48:05] The value of Progress is 85
+[Debug] [2026-11-1 16:48:05] The value of Progress is 90
+[Debug] [2026-11-1 16:48:05] The value of Progress is 95
+[Debug] [2026-11-1 16:48:05] The value of Progress is 100
+[Debug] [2026-11-1 16:48:05] COMMAND[Program] execute successfully, takes 1.0 secs.
+[Debug] [2026-11-1 16:48:05] End to send programming cmd.
+[Debug] [2026-11-1 16:48:05] Log::Print : The done bit is 1
+[Debug] [2026-11-1 16:48:05] Log::Print : COMMAND[Program] execute successfully, takes 1.0 secs.
+[Debug] [2026-11-1 16:48:38] Begin to send programming cmd...
+[Debug] [2026-11-1 16:48:38] Send RPC:5
+[Debug] [2026-11-1 16:48:38] Begin to send program data.
+[Debug] [2026-11-1 16:48:38] End to send program data.
+[Debug] [2026-11-1 16:48:38] Send cmd [Program:20002] OK
+[Debug] [2026-11-1 16:48:38] The value of Progress is 6
+[Debug] [2026-11-1 16:48:38] The value of Progress is 10
+[Debug] [2026-11-1 16:48:38] The value of Progress is 15
+[Debug] [2026-11-1 16:48:38] The value of Progress is 20
+[Debug] [2026-11-1 16:48:38] The value of Progress is 25
+[Debug] [2026-11-1 16:48:38] The value of Progress is 30
+[Debug] [2026-11-1 16:48:38] The value of Progress is 35
+[Debug] [2026-11-1 16:48:38] The value of Progress is 40
+[Debug] [2026-11-1 16:48:38] The value of Progress is 45
+[Debug] [2026-11-1 16:48:38] The value of Progress is 50
+[Debug] [2026-11-1 16:48:38] The value of Progress is 55
+[Debug] [2026-11-1 16:48:38] The value of Progress is 60
+[Debug] [2026-11-1 16:48:38] The value of Progress is 65
+[Debug] [2026-11-1 16:48:38] The value of Progress is 70
+[Debug] [2026-11-1 16:48:38] The value of Progress is 75
+[Debug] [2026-11-1 16:48:38] The value of Progress is 80
+[Debug] [2026-11-1 16:48:38] The value of Progress is 85
+[Debug] [2026-11-1 16:48:38] The value of Progress is 90
+[Debug] [2026-11-1 16:48:38] The value of Progress is 95
+[Debug] [2026-11-1 16:48:38] The value of Progress is 100
+[Debug] [2026-11-1 16:48:39] COMMAND[Program] execute successfully, takes 1.0 secs.
+[Debug] [2026-11-1 16:48:39] End to send programming cmd.
+[Debug] [2026-11-1 16:48:39] Log::Print : The done bit is 1
+[Debug] [2026-11-1 16:48:39] Log::Print : COMMAND[Program] execute successfully, takes 1.0 secs.
+[Debug] [2026-11-1 16:49:07] Begin to send programming cmd...
+[Debug] [2026-11-1 16:49:07] Send RPC:6
+[Debug] [2026-11-1 16:49:07] Begin to send program data.
+[Debug] [2026-11-1 16:49:07] End to send program data.
+[Debug] [2026-11-1 16:49:07] Send cmd [Program:20002] OK
+[Debug] [2026-11-1 16:49:07] The value of Progress is 6
+[Debug] [2026-11-1 16:49:07] The value of Progress is 10
+[Debug] [2026-11-1 16:49:07] The value of Progress is 15
+[Debug] [2026-11-1 16:49:07] The value of Progress is 20
+[Debug] [2026-11-1 16:49:07] The value of Progress is 25
+[Debug] [2026-11-1 16:49:07] The value of Progress is 30
+[Debug] [2026-11-1 16:49:07] The value of Progress is 35
+[Debug] [2026-11-1 16:49:07] The value of Progress is 40
+[Debug] [2026-11-1 16:49:08] The value of Progress is 45
+[Debug] [2026-11-1 16:49:08] The value of Progress is 50
+[Debug] [2026-11-1 16:49:08] The value of Progress is 55
+[Debug] [2026-11-1 16:49:08] The value of Progress is 60
+[Debug] [2026-11-1 16:49:08] The value of Progress is 65
+[Debug] [2026-11-1 16:49:08] The value of Progress is 70
+[Debug] [2026-11-1 16:49:08] The value of Progress is 75
+[Debug] [2026-11-1 16:49:08] The value of Progress is 80
+[Debug] [2026-11-1 16:49:08] The value of Progress is 85
+[Debug] [2026-11-1 16:49:08] The value of Progress is 90
+[Debug] [2026-11-1 16:49:08] The value of Progress is 95
+[Debug] [2026-11-1 16:49:08] The value of Progress is 100
+[Debug] [2026-11-1 16:49:08] COMMAND[Program] execute successfully, takes 1.0 secs.
+[Debug] [2026-11-1 16:49:08] End to send programming cmd.
+[Debug] [2026-11-1 16:49:08] Log::Print : The done bit is 1
+[Debug] [2026-11-1 16:49:08] Log::Print : COMMAND[Program] execute successfully, takes 1.0 secs.
+[Info] [2026-11-1 16:54:00] /***************************End Configration***************************/

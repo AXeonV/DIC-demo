@@ -1,0 +1,1 @@
+.rtl_screen -top_module {Lab3_Led_Key} -include_path {<C:/Users/Admin/Workspace/DIC-demo/PDS_Lab3_Led_Key>} -design_files {<C:/Users/Admin/Workspace/DIC-demo/PDS_Lab3_Led_Key/source/Lab3_Led_Key.v|work>}

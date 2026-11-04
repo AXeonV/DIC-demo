@@ -1,0 +1,289 @@
+//
+// Generated (version 2022.2-SP6.4<build 146967>) at Sun Nov  1 17:54:09 2026
+//
+
+module Lab3_Seg_Key
+(
+    input [7:0] keys,
+    output [7:0] seg_data,
+    output [3:0] seg_sel
+);
+    wire [3:0] N22;
+    wire [7:0] nt_keys;
+    wire [7:0] nt_seg_data;
+
+    GTP_GRS GRS_INST (
+            .GRS_N (1'b1));
+
+    GTP_LUT3 /* N22_mux_1_3 */ #(
+            .INIT(8'b01000000))
+        N22_mux_1_3 (
+            .Z (N22[1]),
+            .I0 (nt_keys[4]),
+            .I1 (nt_keys[5]),
+            .I2 (nt_keys[6]));
+	// LUT = ~I0&I1&I2 ;
+
+    GTP_LUT3 /* N22_mux_2_3 */ #(
+            .INIT(8'b00100000))
+        N22_mux_2_3 (
+            .Z (N22[2]),
+            .I0 (nt_keys[4]),
+            .I1 (nt_keys[5]),
+            .I2 (nt_keys[6]));
+	// LUT = I0&~I1&I2 ;
+
+    GTP_LUT3 /* N22_mux_3_3 */ #(
+            .INIT(8'b00010000))
+        N22_mux_3_3 (
+            .Z (N22[3]),
+            .I0 (nt_keys[4]),
+            .I1 (nt_keys[5]),
+            .I2 (nt_keys[6]));
+	// LUT = ~I0&~I1&I2 ;
+
+    GTP_LUT5 /* N75 */ #(
+            .INIT(32'b00100000000000000000000000000000))
+        N75 (
+            .Z (nt_seg_data[3]),
+            .I0 (nt_keys[0]),
+            .I1 (nt_keys[1]),
+            .I2 (nt_keys[2]),
+            .I3 (nt_keys[3]),
+            .I4 (nt_keys[4]));
+	// LUT = I0&~I1&I2&I3&I4 ;
+	// ../source/Lab3_Seg_Key.v:23
+
+(* PAP_IO_DIRECTION="INPUT", PAP_IO_LOC="J3", PAP_IO_VCCIO="1.5", PAP_IO_STANDARD="LVCMOS15", PAP_IO_NONE="TRUE" *)    GTP_INBUF /* \keys_ibuf[0]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .TERM_DDR("ON"))
+        \keys_ibuf[0]  (
+            .O (nt_keys[0]),
+            .I (keys[0]));
+	// ../source/Lab3_Seg_Key.v:2
+
+(* PAP_IO_DIRECTION="INPUT", PAP_IO_LOC="H1", PAP_IO_VCCIO="1.5", PAP_IO_STANDARD="LVCMOS15", PAP_IO_NONE="TRUE" *)    GTP_INBUF /* \keys_ibuf[1]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .TERM_DDR("ON"))
+        \keys_ibuf[1]  (
+            .O (nt_keys[1]),
+            .I (keys[1]));
+	// ../source/Lab3_Seg_Key.v:2
+
+(* PAP_IO_DIRECTION="INPUT", PAP_IO_LOC="H3", PAP_IO_VCCIO="1.5", PAP_IO_STANDARD="LVCMOS15", PAP_IO_NONE="TRUE" *)    GTP_INBUF /* \keys_ibuf[2]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .TERM_DDR("ON"))
+        \keys_ibuf[2]  (
+            .O (nt_keys[2]),
+            .I (keys[2]));
+	// ../source/Lab3_Seg_Key.v:2
+
+(* PAP_IO_DIRECTION="INPUT", PAP_IO_LOC="F1", PAP_IO_VCCIO="1.5", PAP_IO_STANDARD="LVCMOS15", PAP_IO_NONE="TRUE" *)    GTP_INBUF /* \keys_ibuf[3]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .TERM_DDR("ON"))
+        \keys_ibuf[3]  (
+            .O (nt_keys[3]),
+            .I (keys[3]));
+	// ../source/Lab3_Seg_Key.v:2
+
+(* PAP_IO_DIRECTION="INPUT", PAP_IO_LOC="H5", PAP_IO_VCCIO="1.5", PAP_IO_STANDARD="LVCMOS15", PAP_IO_NONE="TRUE" *)    GTP_INBUF /* \keys_ibuf[4]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .TERM_DDR("ON"))
+        \keys_ibuf[4]  (
+            .O (nt_keys[4]),
+            .I (keys[4]));
+	// ../source/Lab3_Seg_Key.v:2
+
+(* PAP_IO_DIRECTION="INPUT", PAP_IO_LOC="G3", PAP_IO_VCCIO="1.5", PAP_IO_STANDARD="LVCMOS15", PAP_IO_NONE="TRUE" *)    GTP_INBUF /* \keys_ibuf[5]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .TERM_DDR("ON"))
+        \keys_ibuf[5]  (
+            .O (nt_keys[5]),
+            .I (keys[5]));
+	// ../source/Lab3_Seg_Key.v:2
+
+(* PAP_IO_DIRECTION="INPUT", PAP_IO_LOC="G1", PAP_IO_VCCIO="1.5", PAP_IO_STANDARD="LVCMOS15", PAP_IO_NONE="TRUE" *)    GTP_INBUF /* \keys_ibuf[6]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .TERM_DDR("ON"))
+        \keys_ibuf[6]  (
+            .O (nt_keys[6]),
+            .I (keys[6]));
+	// ../source/Lab3_Seg_Key.v:2
+
+    GTP_LUT5 /* seg_data_218_inv */ #(
+            .INIT(32'b00101000100000001000000000000000))
+        seg_data_218_inv (
+            .Z (nt_seg_data[1]),
+            .I0 (nt_keys[0]),
+            .I1 (nt_keys[1]),
+            .I2 (nt_keys[2]),
+            .I3 (nt_keys[3]),
+            .I4 (nt_keys[4]));
+	// LUT = (I0&I1&I2&I3&~I4)|(I0&I1&I2&~I3&I4)|(I0&I1&~I2&I3&I4)|(I0&~I1&I2&I3&I4) ;
+
+    GTP_LUT5 /* \seg_data_223[1]  */ #(
+            .INIT(32'b00000000100000001000000000000000))
+        \seg_data_223[1]  (
+            .Z (nt_seg_data[2]),
+            .I0 (nt_keys[0]),
+            .I1 (nt_keys[1]),
+            .I2 (nt_keys[2]),
+            .I3 (nt_keys[3]),
+            .I4 (nt_keys[4]));
+	// LUT = (I0&I1&I2&I3&~I4)|(I0&I1&I2&~I3&I4) ;
+
+    GTP_LUT5 /* \seg_data_223[2]  */ #(
+            .INIT(32'b00101000000000001000000000000000))
+        \seg_data_223[2]  (
+            .Z (nt_seg_data[4]),
+            .I0 (nt_keys[0]),
+            .I1 (nt_keys[1]),
+            .I2 (nt_keys[2]),
+            .I3 (nt_keys[3]),
+            .I4 (nt_keys[4]));
+	// LUT = (I0&I1&I2&I3&~I4)|(I0&I1&~I2&I3&I4)|(I0&~I1&I2&I3&I4) ;
+
+    GTP_LUT5 /* \seg_data_223[3]  */ #(
+            .INIT(32'b00001000100000001000000000000000))
+        \seg_data_223[3]  (
+            .Z (nt_seg_data[5]),
+            .I0 (nt_keys[0]),
+            .I1 (nt_keys[1]),
+            .I2 (nt_keys[2]),
+            .I3 (nt_keys[3]),
+            .I4 (nt_keys[4]));
+	// LUT = (I0&I1&I2&I3&~I4)|(I0&I1&I2&~I3&I4)|(I0&I1&~I2&I3&I4) ;
+
+    GTP_LUT5 /* \seg_data_223[4]  */ #(
+            .INIT(32'b01101000100000000000000000000000))
+        \seg_data_223[4]  (
+            .Z (nt_seg_data[6]),
+            .I0 (nt_keys[0]),
+            .I1 (nt_keys[1]),
+            .I2 (nt_keys[2]),
+            .I3 (nt_keys[3]),
+            .I4 (nt_keys[4]));
+	// LUT = (I0&I1&I2&~I3&I4)|(I0&I1&~I2&I3&I4)|(I0&~I1&I2&I3&I4)|(~I0&I1&I2&I3&I4) ;
+
+    GTP_LUT5 /* \seg_data_223[5]  */ #(
+            .INIT(32'b01101000000000001000000000000000))
+        \seg_data_223[5]  (
+            .Z (nt_seg_data[7]),
+            .I0 (nt_keys[0]),
+            .I1 (nt_keys[1]),
+            .I2 (nt_keys[2]),
+            .I3 (nt_keys[3]),
+            .I4 (nt_keys[4]));
+	// LUT = (I0&I1&I2&I3&~I4)|(I0&I1&~I2&I3&I4)|(I0&~I1&I2&I3&I4)|(~I0&I1&I2&I3&I4) ;
+
+(* PAP_IO_DIRECTION="OUTPUT", PAP_IO_LOC="J14", PAP_IO_VCCIO="3.3", PAP_IO_STANDARD="LVCMOS33", PAP_IO_DRIVE="4", PAP_IO_NONE="TRUE", PAP_IO_SLEW="SLOW" *)    GTP_OUTBUF /* \seg_data_obuf[0]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        \seg_data_obuf[0]  (
+            .O (seg_data[0]),
+            .I (1'b0));
+	// ../source/Lab3_Seg_Key.v:4
+
+(* PAP_IO_DIRECTION="OUTPUT", PAP_IO_LOC="H13", PAP_IO_VCCIO="3.3", PAP_IO_STANDARD="LVCMOS33", PAP_IO_DRIVE="4", PAP_IO_NONE="TRUE", PAP_IO_SLEW="SLOW" *)    GTP_OUTBUF /* \seg_data_obuf[1]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        \seg_data_obuf[1]  (
+            .O (seg_data[1]),
+            .I (nt_seg_data[1]));
+	// ../source/Lab3_Seg_Key.v:4
+
+(* PAP_IO_DIRECTION="OUTPUT", PAP_IO_LOC="J15", PAP_IO_VCCIO="3.3", PAP_IO_STANDARD="LVCMOS33", PAP_IO_DRIVE="4", PAP_IO_NONE="TRUE", PAP_IO_SLEW="SLOW" *)    GTP_OUTBUF /* \seg_data_obuf[2]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        \seg_data_obuf[2]  (
+            .O (seg_data[2]),
+            .I (nt_seg_data[2]));
+	// ../source/Lab3_Seg_Key.v:4
+
+(* PAP_IO_DIRECTION="OUTPUT", PAP_IO_LOC="L12", PAP_IO_VCCIO="3.3", PAP_IO_STANDARD="LVCMOS33", PAP_IO_DRIVE="4", PAP_IO_NONE="TRUE", PAP_IO_SLEW="SLOW" *)    GTP_OUTBUF /* \seg_data_obuf[3]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        \seg_data_obuf[3]  (
+            .O (seg_data[3]),
+            .I (nt_seg_data[3]));
+	// ../source/Lab3_Seg_Key.v:4
+
+(* PAP_IO_DIRECTION="OUTPUT", PAP_IO_LOC="L16", PAP_IO_VCCIO="3.3", PAP_IO_STANDARD="LVCMOS33", PAP_IO_DRIVE="4", PAP_IO_NONE="TRUE", PAP_IO_SLEW="SLOW" *)    GTP_OUTBUF /* \seg_data_obuf[4]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        \seg_data_obuf[4]  (
+            .O (seg_data[4]),
+            .I (nt_seg_data[4]));
+	// ../source/Lab3_Seg_Key.v:4
+
+(* PAP_IO_DIRECTION="OUTPUT", PAP_IO_LOC="M14", PAP_IO_VCCIO="3.3", PAP_IO_STANDARD="LVCMOS33", PAP_IO_DRIVE="4", PAP_IO_NONE="TRUE", PAP_IO_SLEW="SLOW" *)    GTP_OUTBUF /* \seg_data_obuf[5]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        \seg_data_obuf[5]  (
+            .O (seg_data[5]),
+            .I (nt_seg_data[5]));
+	// ../source/Lab3_Seg_Key.v:4
+
+(* PAP_IO_DIRECTION="OUTPUT", PAP_IO_LOC="H14", PAP_IO_VCCIO="3.3", PAP_IO_STANDARD="LVCMOS33", PAP_IO_DRIVE="4", PAP_IO_NONE="TRUE", PAP_IO_SLEW="SLOW" *)    GTP_OUTBUF /* \seg_data_obuf[6]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        \seg_data_obuf[6]  (
+            .O (seg_data[6]),
+            .I (nt_seg_data[6]));
+	// ../source/Lab3_Seg_Key.v:4
+
+(* PAP_IO_DIRECTION="OUTPUT", PAP_IO_LOC="M16", PAP_IO_VCCIO="3.3", PAP_IO_STANDARD="LVCMOS33", PAP_IO_DRIVE="4", PAP_IO_NONE="TRUE", PAP_IO_SLEW="SLOW" *)    GTP_OUTBUF /* \seg_data_obuf[7]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        \seg_data_obuf[7]  (
+            .O (seg_data[7]),
+            .I (nt_seg_data[7]));
+	// ../source/Lab3_Seg_Key.v:4
+
+(* PAP_IO_DIRECTION="OUTPUT", PAP_IO_LOC="H17", PAP_IO_VCCIO="3.3", PAP_IO_STANDARD="LVCMOS33", PAP_IO_DRIVE="4", PAP_IO_NONE="TRUE", PAP_IO_SLEW="SLOW" *)    GTP_OUTBUF /* \seg_sel_obuf[0]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        \seg_sel_obuf[0]  (
+            .O (seg_sel[0]),
+            .I (1'b0));
+	// ../source/Lab3_Seg_Key.v:3
+
+(* PAP_IO_DIRECTION="OUTPUT", PAP_IO_LOC="J17", PAP_IO_VCCIO="3.3", PAP_IO_STANDARD="LVCMOS33", PAP_IO_DRIVE="4", PAP_IO_NONE="TRUE", PAP_IO_SLEW="SLOW" *)    GTP_OUTBUF /* \seg_sel_obuf[1]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        \seg_sel_obuf[1]  (
+            .O (seg_sel[1]),
+            .I (N22[1]));
+	// ../source/Lab3_Seg_Key.v:3
+
+(* PAP_IO_DIRECTION="OUTPUT", PAP_IO_LOC="L13", PAP_IO_VCCIO="3.3", PAP_IO_STANDARD="LVCMOS33", PAP_IO_DRIVE="4", PAP_IO_NONE="TRUE", PAP_IO_SLEW="SLOW" *)    GTP_OUTBUF /* \seg_sel_obuf[2]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        \seg_sel_obuf[2]  (
+            .O (seg_sel[2]),
+            .I (N22[2]));
+	// ../source/Lab3_Seg_Key.v:3
+
+(* PAP_IO_DIRECTION="OUTPUT", PAP_IO_LOC="N16", PAP_IO_VCCIO="3.3", PAP_IO_STANDARD="LVCMOS33", PAP_IO_DRIVE="4", PAP_IO_NONE="TRUE", PAP_IO_SLEW="SLOW" *)    GTP_OUTBUF /* \seg_sel_obuf[3]  */ #(
+            .IOSTANDARD("DEFAULT"), 
+            .SLEW_RATE("SLOW"), 
+            .DRIVE_STRENGTH("8"))
+        \seg_sel_obuf[3]  (
+            .O (seg_sel[3]),
+            .I (N22[3]));
+	// ../source/Lab3_Seg_Key.v:3
+
+
+endmodule
+
