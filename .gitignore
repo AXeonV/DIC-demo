@@ -1,0 +1,30 @@
+# PDS 构建产物
+/*/compile/
+/*/synthesize/
+/*/device_map/
+/*/place_route/
+/*/report_timing/
+/*/constraint_check/
+/*/generate_bitstream/
+/*/log/
+/*/logbackup/
+/*/multiseed_summary.csv
+
+# 日志及工程自动备份
+*.log
+*.backup_*.pds
+*.OLD.pds
+
+# 仿真产物与编辑器缓存
+/icarus/
+/prj/simulation/
+/.dide/hdl/
+*.vvp
+*.vcd
+*.fst
+*.wave
+*.view
+testbench.out
+
+# Yosys 生成网表，保留 .ys 脚本
+/netlist/*.json
