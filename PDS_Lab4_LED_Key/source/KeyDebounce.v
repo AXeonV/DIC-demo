@@ -21,13 +21,11 @@ module KeyDebounce #(
 
   always @(posedge clk) begin
     keys_pre <= keys;
-    if (!waiting) begin
-      if (keys != keys_pre) begin
-        waiting <= 1;
-        clk_cnt <= 0;
-      end
+    if (keys != keys_pre) begin
+      waiting <= 1;
+      clk_cnt <= 0;
     end
-    else begin
+    else if (waiting) begin
       if (trigger20ms) begin
         keys_deb <= keys;
         waiting <= 0;
