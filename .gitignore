@@ -28,3 +28,6 @@ testbench.out
 
 # Yosys 生成网表，保留 .ys 脚本
 /netlist/*.json
+
+# VSCode 配置
+/.vscode/
